@@ -1,0 +1,22 @@
+{
+	"name": "plastic",
+	"description": "Fluent API for maleable data",
+	"version": "0.1.0",
+	"author": "Mathieu Sylvain <mathieu@ti-coco.com>",
+	"keywords": [
+		"chaingin",
+		"fluent",
+		"underscore",
+		"api",
+		"data",
+		"functionnal",
+		"control flow"
+	],
+	"dependencies": {
+	},
+	"repository"    : {
+		"type": "git",
+		"url": "git://github.com/masyl/plastic.js.git"
+	},
+	"main" : "lib/plastic.js"
+}
