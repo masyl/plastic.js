@@ -1,7 +1,7 @@
 {
 	"name": "plastic",
 	"description": "Fluent API for maleable data",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"author": "Mathieu Sylvain <mathieu@ti-coco.com>",
 	"keywords": [
 		"chaingin",
