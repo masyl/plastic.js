@@ -1,4 +1,4 @@
-var Chain = require("./chain");
+var Chain = require("../lib/plastic");
 
 // A Dog constructor
 function Dog(name) {
