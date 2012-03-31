@@ -1,4 +1,4 @@
-var Plastic = require("../lib/plastic");
+var plasticModel = require("../lib/plasticModel");
 
 // A Dog constructor
 function Dog(name) {
@@ -8,14 +8,14 @@ function Dog(name) {
 }
 
 // Create a chainable model with the Dog model
-var Dogs = new Plastic(Dog, {
-	bark: function(loop, dogs) {
-		return loop(function (dog) {
+var Dogs = plasticModel(Dog, {
+	bark: function(dogs) {
+		return this.loop(function (dog) {
 			console.log(dog.name + " goes 'BARK!'");
 		});
 	},
-	walk: function(howFar, loop, dogs) {
-		return loop(function(dog) {
+	walk: function(dogs, howFar) {
+		return this.loop(function(dog) {
 			console.log(dog.name + " walked " + howFar + " meters away!");
 			dog.distance = dog.distance + howFar;
 		});
@@ -24,8 +24,8 @@ var Dogs = new Plastic(Dog, {
 
 // Add a single jump method that receives all dogs that are in the context
 // Requires you to handle the forEach
-Dogs.use("jump", function(howHigh, loop, dogs) {
-	return loop(function (dog) {
+Dogs.use("jump", function(dogs, howHigh) {
+	return this.loop(function (dog) {
 		dog.jumps.push(howHigh);
 		console.log(dog.name + " jumps " + howHigh + " feet high!");
 	})
@@ -33,18 +33,18 @@ Dogs.use("jump", function(howHigh, loop, dogs) {
 
 // Add multiple methods
 Dogs.use({
-	sleep: function(howLong, loop, dogs) {
-		return loop(function(dog) {
+	sleep: function(dogs, howLong) {
+		return this.loop(function(dog) {
 			console.log(dog.name + " is sleeping for " + howLong + " hours!");
 		});
 	},
-	"stay": function(loop, dogs) {
-		return loop(function(dog) {
+	"stay": function(dogs) {
+		return this.loop(function(dog) {
 			console.log(dog.name + " is doing nothing!");
 		});
 	},
-	"die": function(loop, dogs) {
-		return loop(function(dog) {
+	"die": function(dogs) {
+		return this.loop(function(dog) {
 			console.log(dog.name + " is dead!");
 		});
 	}
@@ -66,10 +66,13 @@ var threeSleepingDogs = dogs
 	})
 	.all() // Select all available dogs
 	.walk(15)
+		.tap(function (dogs) {
+			//console.log("dogs: ", dogs);
+		})
 	.jump(3)
 	.sleep(6)
 	.tap(function (dogs) {
-			//console.log("threeSleepingDogs: ", dogs);
+			console.log("threeSleepingDogs: ", dogs);
 		});
 
 // Only ricky should die
@@ -77,5 +80,5 @@ var deadRicky = dogs
 		.create("Ricky")
 		.die()
 		.tap(function (dogs) {
-				//console.log("deadRicky: ", dogs);
+				console.log("deadRicky: ", dogs);
 			});
