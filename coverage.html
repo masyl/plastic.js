@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style type="text/css">
+  .covered {
+    background-color: green;
+  }
+  .uncovered {
+    background-color: red;
+  }
+  .coverage {
+    font-size: 0.8em;
+    color: #333;
+  }
+  .coverage.fullCoverage {
+    background-color:#0f0;
+    color: #111;
+  }
+  .coverage.okCoverage {
+    background-color: orange;
+  }
+  .coverage.poorCoverage {
+    background-color: red;
+  }
+  .code {
+    font-family: "Consolas", "Courier New", Courier, mono;
+    white-space: pre;
+    line-height: 16px;
+  }
+  .collapsed {
+    display: none;
+  }
+  body {
+    margin-left: 20px;
+    margin-top: 8px;
+    background-color: white;
+    color: black;
+    font-size: 16px;
+  }
+  ol {
+    margin-left: 20px;
+    margin-bottom: 40px;
+    width: 800px;
+    line-height: 18px;
+    -moz-box-shadow: 10px 10px 5px #888;
+    -webkit-box-shadow: 10px 10px 5px #888;
+    box-shadow: 10px 10px 5px #888;
+  }
+  </style>
+  <script type="text/javascript">
+    function expando(elem) {
+      // We're skipping the '/n' text element sibling.
+      var olElement= elem.nextSibling.nextSibling;
+      var currentState= olElement.className;
+      if( currentState == "collapsed" ) currentState= "";
+      else currentState= "collapsed";
+      olElement.className= currentState;
+    }
+  </script>
+</head>
+<body>
+<h2>plastic.js</h2>
+<span class="coverage fullCoverage">[ hits: 97, misses: 0, sloc: 97, coverage: 100.00% ]</span> <a href='#' onclick='expando(this)'>[+]</a>
+<ol class='collapsed'>
+  <li class="code covered" coverage="">/*</li>
+  <li class="code covered" coverage=""># plastic.js</li>
+  <li class="code covered" coverage=""></li>
+  <li class="code covered" coverage="">## Members of the plastic object:</li>
+  <li class="code covered" coverage="">- .fn : The object containing all the chainable functions</li>
+  <li class="code covered" coverage="">- .modules : The object containing all the available modules (including "core")</li>
+  <li class="code covered" coverage=""></li>
+  <li class="code covered" coverage="">## Members of the Chain object</li>
+  <li class="code covered" coverage="">- .context : The items to which the chainable function should apply (recursed by the loop handler)</li>
+  <li class="code covered" coverage="">- .rootContext : The root context. Usefull when keeping track of general model (all objects available, a dom, etc). This rootContext is available at every step of the chain.</li>
+  <li class="code covered" coverage="">- .next(context) : A function to create a new context to be returned by chainable function</li>
+  <li class="code covered" coverage=""></li>
+  <li class="code covered" coverage="">## Members of the execution scope within chainable functions (this) :</li>
+  <li class="code covered" coverage="">- .loop(handler) : A loop handler to assist in processing each items of the context</li>
+  <li class="code covered" coverage="">- .args: The arguments received when the chainable function was called</li>
+  <li class="code covered" coverage="">- .chain: The chain object which contains the context</li>
+  <li class="code covered" coverage="">- .next(contextItems) : A shortcut to the chains ".next" function</li>
+  <li class="code covered" coverage="">- .context: A shortcut to the chains context</li>
+  <li class="code covered" coverage="">- .rootContext: A shortcut to the chains rootContext</li>
+  <li class="code covered" coverage=""></li>
+  <li class="code covered" coverage=""></li>
+  <li class="code covered" coverage="">## Chainable functions of the core module:</li>
+  <li class="code covered" coverage="">- .log(scopeItem) :</li>
+  <li class="code covered" coverage="">- .tap(handler) :</li>
+  <li class="code covered" coverage="">- .take(item) :</li>
+  <li class="code covered" coverage="">- .value() :</li>
+  <li class="code covered" coverage="">- .values() :</li>
+  <li class="code covered" coverage=""></li>
+  <li class="code covered" coverage=""></li>
+  <li class="code covered" coverage="">*/</li>
+  <li class="code covered" coverage=""></li>
+  <li class="code covered" coverage="1">(function () {</li>
+  <li class="code covered" coverage="">	// Add the current folder</li>
+  <li class="code covered" coverage=""></li>
+  <li class="code covered" coverage="1">	function plastic(functionsOrModule) {</li>
+  <li class="code covered" coverage=""></li>
+  <li class="code covered" coverage="">		/**</li>
+  <li class="code covered" coverage="">		 * The core constructor for creating plastic objects.</li>
+  <li class="code covered" coverage="">		 * It is responsible for strating the function chaining</li>
+  <li class="code covered" coverage="">		 */</li>
+  <li class="code covered" coverage="">		// todo: support adding functions with the factory here ?</li>
+  <li class="code covered" coverage="3">		function plasticFactory() {</li>
+  <li class="code covered" coverage=""></li>
+  <li class="code covered" coverage="">			/**</li>
+  <li class="code covered" coverage="">			 * Create a new chain constructor for further prototyping</li>
+  <li class="code covered" coverage="">			 * This object will be user as the "this" scope in all function calls</li>
+  <li class="code covered" coverage="">			 * @param context</li>
+  <li class="code covered" coverage="">			 */</li>
+  <li class="code covered" coverage="">			// Try to externalize it from the Plastic() object</li>
+  <li class="code covered" coverage="3">			function Chain (rootContext, contextInput) {</li>
+  <li class="code covered" coverage="31">				var chain = this;</li>
+  <li class="code covered" coverage="">				// Create a new context array;</li>
+  <li class="code covered" coverage="31">				this.context = [];</li>
+  <li class="code covered" coverage="">				// store the root context in the chain object</li>
+  <li class="code covered" coverage="31">				this.rootContext = rootContext;</li>
+  <li class="code covered" coverage="31">				this.next = function next(newContext) {</li>
+  <li class="code covered" coverage="13">					return new Chain(chain.rootContext, newContext);</li>
+  <li class="code covered" coverage="">				};</li>
+  <li class="code covered" coverage="31">				if (contextInput) {</li>
+  <li class="code covered" coverage="">					// Transfer all the contextInput into the new context</li>
+  <li class="code covered" coverage="28">					for (var i = 0; i &lt; contextInput.length; i = i + 1) {</li>
+  <li class="code covered" coverage="48">						this.context.push(contextInput[i]);</li>
+  <li class="code covered" coverage="">					}</li>
+  <li class="code covered" coverage="">				}</li>
+  <li class="code covered" coverage="">			}</li>
+  <li class="code covered" coverage=""></li>
+  <li class="code covered" coverage="3">			Chain.prototype.emit = function(functionName, args, _prefix) {</li>
+  <li class="code covered" coverage="74">				var</li>
+  <li class="code covered" coverage="">						listener,</li>
+  <li class="code covered" coverage="">						chain = this,</li>
+  <li class="code covered" coverage="">						prefix = (_prefix) ? _prefix + ":" : "";</li>
+  <li class="code covered" coverage="74">				listener = plasticFactory.listeners[(prefix || "") + functionName];</li>
+  <li class="code covered" coverage="74">				if (listener) {</li>
+  <li class="code covered" coverage="7">					listener.apply(chain, args);</li>
+  <li class="code covered" coverage="">				}</li>
+  <li class="code covered" coverage="">			};</li>
+  <li class="code covered" coverage=""></li>
+  <li class="code covered" coverage=""></li>
+  <li class="code covered" coverage="">			// add functions to the chain constructor</li>
+  <li class="code covered" coverage="3">			for (var functionName in plasticFactory.fn) {</li>
+  <li class="code covered" coverage="30">				if (plasticFactory.fn.hasOwnProperty(functionName)) {</li>
+  <li class="code covered" coverage="30">					Chain.prototype[functionName] = plasticFactory.fn[functionName];</li>
+  <li class="code covered" coverage="">				}</li>
+  <li class="code covered" coverage="">			}</li>
+  <li class="code covered" coverage=""></li>
+  <li class="code covered" coverage="">			// Start a new chain with a fresh root context</li>
+  <li class="code covered" coverage="3">			return new Chain([]);</li>
+  <li class="code covered" coverage="">		}</li>
+  <li class="code covered" coverage=""></li>
+  <li class="code covered" coverage="">		// The object that contains all the functions to be added to the main chain' prototype</li>
+  <li class="code covered" coverage="3">		plasticFactory.fn = {};</li>
+  <li class="code covered" coverage=""></li>
+  <li class="code covered" coverage="">		/**</li>
+  <li class="code covered" coverage="">		 * A new functions to a Plastic object</li>
+  <li class="code covered" coverage="">		 * @param nameOrObj Function name or an object containing a literal object with multiple functions</li>
+  <li class="code covered" coverage="">		 * @param handler An optionnal handler (when the first argument is a function name)</li>
+  <li class="code covered" coverage="">		 */</li>
+  <li class="code covered" coverage="3">		plasticFactory.use = function (nameOrObj, handler) {</li>
+  <li class="code covered" coverage="9">			var obj = {};</li>
+  <li class="code covered" coverage="9">			if (typeof(handler) === "function") {</li>
+  <li class="code covered" coverage="1">				obj = {};</li>
+  <li class="code covered" coverage="1">				obj[nameOrObj] = handler;</li>
+  <li class="code covered" coverage="">			} else {</li>
+  <li class="code covered" coverage="8">				obj = nameOrObj;</li>
+  <li class="code covered" coverage="">			}</li>
+  <li class="code covered" coverage="9">			for (var functionName in obj) {</li>
+  <li class="code covered" coverage="30">				if (obj.hasOwnProperty(functionName)) {</li>
+  <li class="code covered" coverage="30">					this.fn[functionName] = wrapper(functionName, obj[functionName]);</li>
+  <li class="code covered" coverage="">				}</li>
+  <li class="code covered" coverage="">			}</li>
+  <li class="code covered" coverage="9">			return this;</li>
+  <li class="code covered" coverage="">		};</li>
+  <li class="code covered" coverage=""></li>
+  <li class="code covered" coverage="3">		plasticFactory.listeners = {};</li>
+  <li class="code covered" coverage=""></li>
+  <li class="code covered" coverage="">		/**</li>
+  <li class="code covered" coverage="">		 * Add an event listener on any function call.</li>
+  <li class="code covered" coverage="">		 * The listener will be triggered once with the whole context</li>
+  <li class="code covered" coverage="">		 * as an argument</li>
+  <li class="code covered" coverage="">		 * @param functionName</li>
+  <li class="code covered" coverage="">		 * @param handler</li>
+  <li class="code covered" coverage="">		 * @param _prefix</li>
+  <li class="code covered" coverage="">		 */</li>
+  <li class="code covered" coverage="3">		plasticFactory.on = function (functionName, handler, _prefix) {</li>
+  <li class="code covered" coverage="3">			var prefix = (_prefix) ? _prefix + ":" : "";</li>
+  <li class="code covered" coverage="3">			if (functionName &amp;&amp; handler) {</li>
+  <li class="code covered" coverage="3">				plasticFactory.listeners[prefix+functionName] = handler;</li>
+  <li class="code covered" coverage="">			}</li>
+  <li class="code covered" coverage="">		};</li>
+  <li class="code covered" coverage=""></li>
+  <li class="code covered" coverage="">		/**</li>
+  <li class="code covered" coverage="">		 * Add an event listener on any function call.</li>
+  <li class="code covered" coverage="">		 * The listener will be triggered individually for each item</li>
+  <li class="code covered" coverage="">		 * of the context</li>
+  <li class="code covered" coverage="">		 * @param handlerName</li>
+  <li class="code covered" coverage="">		 * @param handler</li>
+  <li class="code covered" coverage="">		 */</li>
+  <li class="code covered" coverage="3">		plasticFactory.onEach = function (handlerName, handler) {</li>
+  <li class="code covered" coverage="1">			plasticFactory.on(handlerName, handler, "each");</li>
+  <li class="code covered" coverage="">		};</li>
+  <li class="code covered" coverage=""></li>
+  <li class="code covered" coverage="">		/**</li>
+  <li class="code covered" coverage="">		 * Internal function wrapper used for all functions added to a plastic object</li>
+  <li class="code covered" coverage="">		 * via the "use" function</li>
+  <li class="code covered" coverage="">		 * @param handler</li>
+  <li class="code covered" coverage="">		 */</li>
+  <li class="code covered" coverage="3">		function wrapper(handlerName, handler) {</li>
+  <li class="code covered" coverage="30">			return function () {</li>
+  <li class="code covered" coverage="42">				var chain = this;</li>
+  <li class="code covered" coverage="42">				var args = Array.prototype.slice.call(arguments, 0);</li>
+  <li class="code covered" coverage="42">				args.unshift(chain.context);</li>
+  <li class="code covered" coverage="42">				var _this = {</li>
+  <li class="code covered" coverage="">					loop: loop,</li>
+  <li class="code covered" coverage="">					next: chain.next,</li>
+  <li class="code covered" coverage="">					chain: chain,</li>
+  <li class="code covered" coverage="">					args: args,</li>
+  <li class="code covered" coverage="">					context: chain.context,</li>
+  <li class="code covered" coverage="">					rootContext: chain.rootContext</li>
+  <li class="code covered" coverage="">				};</li>
+  <li class="code covered" coverage="">				// Create a fresh loop handler</li>
+  <li class="code covered" coverage="42">				function loop(handler) {</li>
+  <li class="code covered" coverage="15">					var newContext = [],</li>
+  <li class="code covered" coverage="">						returnValue,</li>
+  <li class="code covered" coverage="">						contextItem,</li>
+  <li class="code covered" coverage="">						loopArgs = args.slice(1);</li>
+  <li class="code covered" coverage="15">					for (var i = 0; i &lt; chain.context.length; i = i + 1) {</li>
+  <li class="code covered" coverage="32">						contextItem = chain.context[i];</li>
+  <li class="code covered" coverage="">						// Put the contextItem as the first argument</li>
+  <li class="code covered" coverage="32">						loopArgs.unshift(contextItem);</li>
+  <li class="code covered" coverage="">						// Emit an event before the handler is called</li>
+  <li class="code covered" coverage="32">						chain.emit.call(_this, handlerName, loopArgs, "each");</li>
+  <li class="code covered" coverage="">						// Call the handler</li>
+  <li class="code covered" coverage="32">						returnValue = handler.apply(_this, loopArgs);</li>
+  <li class="code covered" coverage="">						// If the loop handler return undefined or true, the item is</li>
+  <li class="code covered" coverage="">						// added to the new context, otherwise it is not.</li>
+  <li class="code covered" coverage="32">						if (typeof returnValue === "undefined" || returnValue === true) {</li>
+  <li class="code covered" coverage="16">							newContext.push(contextItem);</li>
+  <li class="code covered" coverage="16">						} else if (returnValue !== false) {</li>
+  <li class="code covered" coverage="15">							newContext.push(returnValue);</li>
+  <li class="code covered" coverage="">						}</li>
+  <li class="code covered" coverage="">						// Otherwise, if false, dont add anything back in the context</li>
+  <li class="code covered" coverage="">						// Remove the contextItem from the first argument</li>
+  <li class="code covered" coverage="32">						loopArgs.shift(contextItem);</li>
+  <li class="code covered" coverage="">					}</li>
+  <li class="code covered" coverage="15">					var newChain = new chain.constructor(chain.rootContext, newContext);</li>
+  <li class="code covered" coverage="15">					return newChain;</li>
+  <li class="code covered" coverage="">				}</li>
+  <li class="code covered" coverage="">				// Emit an event before the handler is called</li>
+  <li class="code covered" coverage="42">				chain.emit.call(_this, handlerName, args);</li>
+  <li class="code covered" coverage="">				// Call the handler</li>
+  <li class="code covered" coverage="42">				var newChainOrReturnValue = handler.apply(_this, args);</li>
+  <li class="code covered" coverage="42">				args.pop();</li>
+  <li class="code covered" coverage="42">				return newChainOrReturnValue;</li>
+  <li class="code covered" coverage="">			};</li>
+  <li class="code covered" coverage="">		}</li>
+  <li class="code covered" coverage=""></li>
+  <li class="code covered" coverage="">		/**</li>
+  <li class="code covered" coverage="">		 * Load a plastic module from the standard modules or external modules</li>
+  <li class="code covered" coverage="">		 * @param moduleOrName</li>
+  <li class="code covered" coverage="">		 */</li>
+  <li class="code covered" coverage="3">		plasticFactory.load = function load(moduleOrName) {</li>
+  <li class="code covered" coverage="6">			var module;</li>
+  <li class="code covered" coverage="6">			if (typeof moduleOrName === "function") {</li>
+  <li class="code covered" coverage="1">				module = moduleOrName;</li>
+  <li class="code covered" coverage="">			} else {</li>
+  <li class="code covered" coverage="5">				module = plastic.modules[moduleOrName];</li>
+  <li class="code covered" coverage="">			}</li>
+  <li class="code covered" coverage="6">			if (module) {</li>
+  <li class="code covered" coverage="">				// call the module handler so it can configure this</li>
+  <li class="code covered" coverage="">				// plastic instance</li>
+  <li class="code covered" coverage="6">				module.call(plasticFactory);</li>
+  <li class="code covered" coverage="">			}</li>
+  <li class="code covered" coverage="">		};</li>
+  <li class="code covered" coverage=""></li>
+  <li class="code covered" coverage="">		// Load the plastic core</li>
+  <li class="code covered" coverage="3">		plasticFactory.load("core");</li>
+  <li class="code covered" coverage=""></li>
+  <li class="code covered" coverage="">		// Either load the specified additionnal module, or add specified</li>
+  <li class="code covered" coverage="">		// functions to the new Plastic constructor</li>
+  <li class="code covered" coverage="3">		if (typeof functionsOrModule === "string") {</li>
+  <li class="code covered" coverage="1">			plasticFactory.load(functionsOrModule);</li>
+  <li class="code covered" coverage="2">		} else if (typeof functionsOrModule === "function") {</li>
+  <li class="code covered" coverage="">			// todo: should it really go throug load</li>
+  <li class="code covered" coverage="1">			plasticFactory.load(functionsOrModule);</li>
+  <li class="code covered" coverage="1">		} else if (typeof functionsOrModule === "object") {</li>
+  <li class="code covered" coverage="">			// If a collection of object is passed, its functions will be</li>
+  <li class="code covered" coverage="">			// added to the plastic instance</li>
+  <li class="code covered" coverage="1">			plasticFactory.use(functionsOrModule);</li>
+  <li class="code covered" coverage="">		}</li>
+  <li class="code covered" coverage=""></li>
+  <li class="code covered" coverage="">		// Return the new Plastic constructor</li>
+  <li class="code covered" coverage="3">		return plasticFactory();</li>
+  <li class="code covered" coverage="">	}</li>
+  <li class="code covered" coverage=""></li>
+  <li class="code covered" coverage="">	// todo: do a better detection of node (require could be also on the client side)</li>
+  <li class="code covered" coverage="">	// Load modules with "require" if in node context</li>
+  <li class="code covered" coverage="1">	plastic.modules = {};</li>
+  <li class="code covered" coverage="1">	if (require) {</li>
+  <li class="code covered" coverage="">		// todo: this should probably be an extend!</li>
+  <li class="code covered" coverage="1">		plastic.modules = require("./modules");</li>
+  <li class="code covered" coverage="">	}</li>
+  <li class="code covered" coverage=""></li>
+  <li class="code covered" coverage="">	// Add the plastic core module to the list of modules</li>
+  <li class="code covered" coverage="1">	plastic.modules.core = core;</li>
+  <li class="code covered" coverage=""></li>
+  <li class="code covered" coverage="">	/**</li>
+  <li class="code covered" coverage="">	 * The plastic.js core module, which is loaded with every instances</li>
+  <li class="code covered" coverage="">	 */</li>
+  <li class="code covered" coverage="1">	function core() {</li>
+  <li class="code covered" coverage="">		// Add functions to the core module</li>
+  <li class="code covered" coverage="3">		this.use({</li>
+  <li class="code covered" coverage="">			/**</li>
+  <li class="code covered" coverage="">			 * Return the value of the first item in the context</li>
+  <li class="code covered" coverage="">			 * @param context</li>
+  <li class="code covered" coverage="">			 */</li>
+  <li class="code covered" coverage="">			"value": function (context) {</li>
+  <li class="code covered" coverage="4">				return this.context[0];</li>
+  <li class="code covered" coverage="">			},</li>
+  <li class="code covered" coverage="">			/**</li>
+  <li class="code covered" coverage="">			 * Return a array copy of the context</li>
+  <li class="code covered" coverage="">			 * @param context</li>
+  <li class="code covered" coverage="">			 */</li>
+  <li class="code covered" coverage="">			"values": function (context) {</li>
+  <li class="code covered" coverage="1">				return this.context.slice(0);</li>
+  <li class="code covered" coverage="">			},</li>
+  <li class="code covered" coverage="">			/**</li>
+  <li class="code covered" coverage="">			 * Create a next context with an additionnal item in it</li>
+  <li class="code covered" coverage="">			 * @param context</li>
+  <li class="code covered" coverage="">			 * @param item</li>
+  <li class="code covered" coverage="">			 */</li>
+  <li class="code covered" coverage="">			"take": function (context, item) {</li>
+  <li class="code covered" coverage="5">				var next = this.next(this.context);</li>
+  <li class="code covered" coverage="5">				next.context.push(item);</li>
+  <li class="code covered" coverage="5">				return next;</li>
+  <li class="code covered" coverage="">			},</li>
+  <li class="code covered" coverage="">			/**</li>
+  <li class="code covered" coverage="">			 * Core function for intercepting a chain and plating your the context</li>
+  <li class="code covered" coverage="">			 * Usefull for logging, debugging and ad-hoc operations.</li>
+  <li class="code covered" coverage="">			 * This function doest not create a new context</li>
+  <li class="code covered" coverage="">			 * @param handler</li>
+  <li class="code covered" coverage="">			 */</li>
+  <li class="code covered" coverage="">			"tap": function (context, handler) {</li>
+  <li class="code covered" coverage="4">				handler(this);</li>
+  <li class="code covered" coverage="4">				return this.chain;</li>
+  <li class="code covered" coverage="">			},</li>
+  <li class="code covered" coverage="">			/**</li>
+  <li class="code covered" coverage="">			 * Log the scope or member of the scope in which the function</li>
+  <li class="code covered" coverage="">			 * are executed. This lets you log things like .log("context")</li>
+  <li class="code covered" coverage="">			 * This function doest not create a new context</li>
+  <li class="code covered" coverage="">			 * @param logItem</li>
+  <li class="code covered" coverage="">			 */</li>
+  <li class="code covered" coverage="">			"log": function (context, logItem) {</li>
+  <li class="code covered" coverage="3">				if (logItem) {</li>
+  <li class="code covered" coverage="2">					console.log(this[logItem]);</li>
+  <li class="code covered" coverage="">				} else {</li>
+  <li class="code covered" coverage="1">					console.log(this);</li>
+  <li class="code covered" coverage="">				}</li>
+  <li class="code covered" coverage="3">				return this.chain;</li>
+  <li class="code covered" coverage="">			}</li>
+  <li class="code covered" coverage="">		});</li>
+  <li class="code covered" coverage="">	}</li>
+  <li class="code covered" coverage=""></li>
+  <li class="code covered" coverage="">	// Export the plastic module</li>
+  <li class="code covered" coverage="2">	if (module &amp;&amp; module.exports) module.exports = plastic;</li>
+  <li class="code covered" coverage="1">	this.plastic = plastic;</li>
+  <li class="code covered" coverage=""></li>
+  <li class="code covered" coverage="">})();</li>
+  <li class="code covered" coverage=""></li>
+</ol>
+<hr/>
+<h2>modules/index.js</h2>
+<span class="coverage fullCoverage">[ hits: 1, misses: 0, sloc: 1, coverage: 100.00% ]</span> <a href='#' onclick='expando(this)'>[+]</a>
+<ol class='collapsed'>
+  <li class="code covered" coverage="1">module.exports = {</li>
+  <li class="code covered" coverage="">	"math": require("./math"),</li>
+  <li class="code covered" coverage="">	"model": require("./model")</li>
+  <li class="code covered" coverage="">};</li>
+</ol>
+<hr/>
+<h2>modules/math.js</h2>
+<span class="coverage fullCoverage">[ hits: 14, misses: 0, sloc: 14, coverage: 100.00% ]</span> <a href='#' onclick='expando(this)'>[+]</a>
+<ol class='collapsed'>
+  <li class="code covered" coverage="">/*</li>
+  <li class="code covered" coverage=""></li>
+  <li class="code covered" coverage=""># plasticMath</li>
+  <li class="code covered" coverage=""></li>
+  <li class="code covered" coverage="">A fluent api for for basic mathematical operators based on plastic.js</li>
+  <li class="code covered" coverage=""></li>
+  <li class="code covered" coverage=""># Why?</li>
+  <li class="code covered" coverage=""></li>
+  <li class="code covered" coverage="">Why use long function chains for simple math operations? But before</li>
+  <li class="code covered" coverage="">yelling *madness* consider the two scenarios for which the library has been</li>
+  <li class="code covered" coverage="">created.</li>
+  <li class="code covered" coverage=""></li>
+  <li class="code covered" coverage="">First, it will be used to extend existing fluent apis with math functions. It makes sense to do</li>
+  <li class="code covered" coverage="">math with function if your already chaining methods. Ex.:</li>
+  <li class="code covered" coverage="">	var maxSizeInK = conf("maxSize").dividedBy(1024).round();</li>
+  <li class="code covered" coverage=""></li>
+  <li class="code covered" coverage="">Second, we have a templating engine called "Dali" which will soon get a</li>
+  <li class="code covered" coverage="">rewrite. In its new version this templating engine will not allow the</li>
+  <li class="code covered" coverage="">embedding of javascript and only support the use of function calls instead of</li>
+  <li class="code covered" coverage="">full-fledge expressions.</li>
+  <li class="code covered" coverage=""></li>
+  <li class="code covered" coverage="">But wait, There is a third scenario which is not yet implemented. While</li>
+  <li class="code covered" coverage="">operations on simple number like "3 + 5" is easy to do with standard operators,</li>
+  <li class="code covered" coverage="">operation of arrays and matrices are really complexe. So, eventually this api</li>
+  <li class="code covered" coverage="">will support operations on more complexe structures. For example:</li>
+  <li class="code covered" coverage="">	var matrix = [6, 6, 4, 4, 5, 6];</li>
+  <li class="code covered" coverage="">	math(matrix).mod(</li>
+  <li class="code covered" coverage="">		math(matrix).average()</li>
+  <li class="code covered" coverage="">	)</li>
+  <li class="code covered" coverage=""></li>
+  <li class="code covered" coverage=""># Usage</li>
+  <li class="code covered" coverage=""></li>
+  <li class="code covered" coverage="">Create an instance :</li>
+  <li class="code covered" coverage="">	var math = plasticMath();</li>
+  <li class="code covered" coverage=""></li>
+  <li class="code covered" coverage="">For this operation :</li>
+  <li class="code covered" coverage="">	var result = (4 * 3) / 6 - 1;</li>
+  <li class="code covered" coverage=""></li>
+  <li class="code covered" coverage="">Use a function chain like this:</li>
+  <li class="code covered" coverage="">	var result = math(4).multipliedBy(3).dividedBy(6).minus(1).val();</li>
+  <li class="code covered" coverage=""></li>
+  <li class="code covered" coverage=""></li>
+  <li class="code covered" coverage="">## Utility functions:</li>
+  <li class="code covered" coverage="">- .val(number) : Return the value of the first item in the context</li>
+  <li class="code covered" coverage="">- .take(number) : Use a new number for the current context</li>
+  <li class="code covered" coverage=""></li>
+  <li class="code covered" coverage="">## Math functions:</li>
+  <li class="code covered" coverage="">- .minus(number) : Calculate the context minus this number</li>
+  <li class="code covered" coverage="">- .plus(number) : Calculate the context plus this number</li>
+  <li class="code covered" coverage="">- .dividedBy(number) : Calculate the context divided by this number</li>
+  <li class="code covered" coverage="">- .multipliedBy(number) : Calculate the context multiplied by this number</li>
+  <li class="code covered" coverage=""></li>
+  <li class="code covered" coverage=""> */</li>
+  <li class="code covered" coverage="1">(function (plastic) {</li>
+  <li class="code covered" coverage=""></li>
+  <li class="code covered" coverage="1">	function plasticModule() {</li>
+  <li class="code covered" coverage=""></li>
+  <li class="code covered" coverage="1">		var functions = {</li>
+  <li class="code covered" coverage="">			"minus": function (numbers, amount) {</li>
+  <li class="code covered" coverage="1">				return this.loop(function (number) {</li>
+  <li class="code covered" coverage="1">					return number - amount;</li>
+  <li class="code covered" coverage="">				});</li>
+  <li class="code covered" coverage="">			},</li>
+  <li class="code covered" coverage="">			"plus": function (numbers, amount) {</li>
+  <li class="code covered" coverage="2">				return this.loop(function (number) {</li>
+  <li class="code covered" coverage="2">					return number + amount;</li>
+  <li class="code covered" coverage="">				});</li>
+  <li class="code covered" coverage="">			},</li>
+  <li class="code covered" coverage="">			"multipliedBy": function (numbers, amount) {</li>
+  <li class="code covered" coverage="5">				return this.loop(function (number) {</li>
+  <li class="code covered" coverage="5">					return number * amount;</li>
+  <li class="code covered" coverage="">				});</li>
+  <li class="code covered" coverage="">			},</li>
+  <li class="code covered" coverage="">			"dividedBy": function (numbers, amount) {</li>
+  <li class="code covered" coverage="2">				return this.loop(function (number) {</li>
+  <li class="code covered" coverage="2">					return number / amount;</li>
+  <li class="code covered" coverage="">				});</li>
+  <li class="code covered" coverage="">			}</li>
+  <li class="code covered" coverage="">		};</li>
+  <li class="code covered" coverage=""></li>
+  <li class="code covered" coverage="">		// Add the math functions</li>
+  <li class="code covered" coverage="1">		this.use(functions);</li>
+  <li class="code covered" coverage=""></li>
+  <li class="code covered" coverage="">	}</li>
+  <li class="code covered" coverage=""></li>
+  <li class="code covered" coverage="">	// Export as either a global or a module</li>
+  <li class="code covered" coverage="1">	if (plastic) plastic.modules.math = plasticModule;</li>
+  <li class="code covered" coverage="2">	if (module) module.exports = plasticModule;</li>
+  <li class="code covered" coverage=""></li>
+  <li class="code covered" coverage="">})(this.plastic);</li>
+  <li class="code covered" coverage=""></li>
+</ol>
+<hr/>
+<h2>modules/model.js</h2>
+<span class="coverage fullCoverage">[ hits: 25, misses: 0, sloc: 25, coverage: 100.00% ]</span> <a href='#' onclick='expando(this)'>[+]</a>
+<ol class='collapsed'>
+  <li class="code covered" coverage="1">(function (plastic) {</li>
+  <li class="code covered" coverage=""></li>
+  <li class="code covered" coverage="1">	function plasticModule() {</li>
+  <li class="code covered" coverage="">		// Model will store the model object specified for each plastic instance</li>
+  <li class="code covered" coverage="1">		var Model;</li>
+  <li class="code covered" coverage="1">		var functions = {</li>
+  <li class="code covered" coverage="">			/**</li>
+  <li class="code covered" coverage="">			 * Specify the constructor for creating new instance of the model</li>
+  <li class="code covered" coverage="">			 * @param context</li>
+  <li class="code covered" coverage="">			 * @param model</li>
+  <li class="code covered" coverage="">			 */</li>
+  <li class="code covered" coverage="">			model: function (context, model) {</li>
+  <li class="code covered" coverage="1">				if (model) {</li>
+  <li class="code covered" coverage="1">					Model = model;</li>
+  <li class="code covered" coverage="">				}</li>
+  <li class="code covered" coverage="1">				return this.chain;</li>
+  <li class="code covered" coverage="">			},</li>
+  <li class="code covered" coverage="">			/**</li>
+  <li class="code covered" coverage="">			 * Create a new model instance and adds it to both the root context and current context</li>
+  <li class="code covered" coverage="">			 */</li>
+  <li class="code covered" coverage="">			create: function () {</li>
+  <li class="code covered" coverage="7">				if (typeof Model === "function") {</li>
+  <li class="code covered" coverage="6">					var construstor = functionnalConstructor(Model);</li>
+  <li class="code covered" coverage="">					// Cut out the context argument</li>
+  <li class="code covered" coverage="6">					var args = Array.prototype.slice.call(arguments, 1);</li>
+  <li class="code covered" coverage="6">					var model = construstor.apply(this, args);</li>
+  <li class="code covered" coverage="">					// Add the new instance to the rootContext</li>
+  <li class="code covered" coverage="6">					this.rootContext.push(model);</li>
+  <li class="code covered" coverage="">					// And also pass it as the next context</li>
+  <li class="code covered" coverage="6">					return this.next([model]);</li>
+  <li class="code covered" coverage="">				} else {</li>
+  <li class="code covered" coverage="1">					return this.chain;</li>
+  <li class="code covered" coverage="">				}</li>
+  <li class="code covered" coverage="">			},</li>
+  <li class="code covered" coverage="">			/**</li>
+  <li class="code covered" coverage="">			 * Return a new context with all the items in it</li>
+  <li class="code covered" coverage="">			 */</li>
+  <li class="code covered" coverage="">			all: function all() {</li>
+  <li class="code covered" coverage="2">				return this.next(this.rootContext);</li>
+  <li class="code covered" coverage="">			}</li>
+  <li class="code covered" coverage="">		};</li>
+  <li class="code covered" coverage=""></li>
+  <li class="code covered" coverage="">		// Add the model functions</li>
+  <li class="code covered" coverage="1">		this.use(functions);</li>
+  <li class="code covered" coverage="">	}</li>
+  <li class="code covered" coverage=""></li>
+  <li class="code covered" coverage="">	/**</li>
+  <li class="code covered" coverage="">	 * Transform a constructor so that it can be call like a normal function</li>
+  <li class="code covered" coverage="">	 * without changing its original behavior</li>
+  <li class="code covered" coverage="">	 * (without the "new" instruction)</li>
+  <li class="code covered" coverage="">	 * @param Constructor</li>
+  <li class="code covered" coverage="">	 */</li>
+  <li class="code covered" coverage="1">	function functionnalConstructor(Constructor) {</li>
+  <li class="code covered" coverage="6">		return function() {</li>
+  <li class="code covered" coverage="6">			var args = Array.prototype.slice.call(arguments, 0),</li>
+  <li class="code covered" coverage="">				Temp = function () {}, // temporary constructor</li>
+  <li class="code covered" coverage="">				inst,</li>
+  <li class="code covered" coverage="">				ret;</li>
+  <li class="code covered" coverage="">			// Give the Temp constructor the Constructor's prototype</li>
+  <li class="code covered" coverage="6">			Temp.prototype = Constructor.prototype;</li>
+  <li class="code covered" coverage="">			// Create a new instance</li>
+  <li class="code covered" coverage="6">			inst = new Temp;</li>
+  <li class="code covered" coverage="">			// Call the original Constructor with the temp instance as its context (i.e. its 'this' value)</li>
+  <li class="code covered" coverage="6">			ret = Constructor.apply(inst, args);</li>
+  <li class="code covered" coverage="">			// If an object has been returned then return it otherwise return the original instance.</li>
+  <li class="code covered" coverage="">			// (consistent with behaviour of the new operator)</li>
+  <li class="code covered" coverage="6">			return Object(ret) === ret ? ret : inst;</li>
+  <li class="code covered" coverage="">		}</li>
+  <li class="code covered" coverage="">	}</li>
+  <li class="code covered" coverage=""></li>
+  <li class="code covered" coverage="">	// Export as either a global or a module</li>
+  <li class="code covered" coverage="1">	if (plastic) plastic.modules.math = plasticModule;</li>
+  <li class="code covered" coverage="2">	if (module) module.exports = plasticModule;</li>
+  <li class="code covered" coverage=""></li>
+  <li class="code covered" coverage="">})(this.plastic);</li>
+  <li class="code covered" coverage=""></li>
+</ol>
+<hr/>
+</body>
+</html>
