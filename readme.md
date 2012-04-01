@@ -24,9 +24,9 @@ Even if the tests are not extensive yet, I try to keep the test coverage at 100%
 You can use vows to run the tests. The "lib-cov" folder contains the instrumented
 version of the code in order to obtain the html code-coverage report during tests.
 
-### Test commands
-- rm -rf lib-cov
-- node-jscoverage lib lib-cov
-- vows --spec --cover-html
+### Commands to start unit tests
+	rm -rf lib-cov
+	node-jscoverage lib lib-cov
+	vows --spec --cover-html
 
 With these commands, vows will have create a "coverage.html" in the same folder.
