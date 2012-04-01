@@ -12,11 +12,17 @@
 		"functionnal",
 		"control flow"
 	],
+	"devDependencies": {
+		"vows": "0.6.x"
+	},
 	"dependencies": {
 	},
 	"repository"    : {
 		"type": "git",
 		"url": "git://github.com/masyl/plastic.js.git"
 	},
-	"main" : "lib/plastic.js"
+	"main" : "lib/plastic.js",
+	"scripts": {
+		"test": "node server.js"
+	}
 }
