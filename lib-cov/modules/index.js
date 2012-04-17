@@ -5,5 +5,5 @@ if (! _$jscoverage['modules/index.js']) {
   _$jscoverage['modules/index.js'][1] = 0;
 }
 _$jscoverage['modules/index.js'][1]++;
-module.exports = {"math": require("./math"), "model": require("./model")};
-_$jscoverage['modules/index.js'].source = ["module.exports = {","\t\"math\": require(\"./math\"),","\t\"model\": require(\"./model\")","};"];
+module.exports = {"math": require("./math"), "model": require("./model"), "jugglingDB": require("./jugglingDB")};
+_$jscoverage['modules/index.js'].source = ["module.exports = {","\t\"math\": require(\"./math\"),","\t\"model\": require(\"./model\"),","\t\"jugglingDB\": require(\"./jugglingDB\")","};"];

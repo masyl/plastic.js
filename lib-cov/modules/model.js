@@ -4,96 +4,174 @@ if (! _$jscoverage['modules/model.js']) {
   _$jscoverage['modules/model.js'] = [];
   _$jscoverage['modules/model.js'][1] = 0;
   _$jscoverage['modules/model.js'][3] = 0;
-  _$jscoverage['modules/model.js'][5] = 0;
-  _$jscoverage['modules/model.js'][6] = 0;
-  _$jscoverage['modules/model.js'][13] = 0;
-  _$jscoverage['modules/model.js'][14] = 0;
+  _$jscoverage['modules/model.js'][4] = 0;
+  _$jscoverage['modules/model.js'][11] = 0;
   _$jscoverage['modules/model.js'][16] = 0;
+  _$jscoverage['modules/model.js'][17] = 0;
+  _$jscoverage['modules/model.js'][19] = 0;
+  _$jscoverage['modules/model.js'][20] = 0;
   _$jscoverage['modules/model.js'][22] = 0;
   _$jscoverage['modules/model.js'][23] = 0;
-  _$jscoverage['modules/model.js'][25] = 0;
-  _$jscoverage['modules/model.js'][26] = 0;
-  _$jscoverage['modules/model.js'][28] = 0;
   _$jscoverage['modules/model.js'][30] = 0;
+  _$jscoverage['modules/model.js'][31] = 0;
   _$jscoverage['modules/model.js'][32] = 0;
-  _$jscoverage['modules/model.js'][39] = 0;
-  _$jscoverage['modules/model.js'][44] = 0;
+  _$jscoverage['modules/model.js'][38] = 0;
+  _$jscoverage['modules/model.js'][45] = 0;
+  _$jscoverage['modules/model.js'][48] = 0;
+  _$jscoverage['modules/model.js'][49] = 0;
   _$jscoverage['modules/model.js'][53] = 0;
-  _$jscoverage['modules/model.js'][54] = 0;
   _$jscoverage['modules/model.js'][55] = 0;
+  _$jscoverage['modules/model.js'][57] = 0;
+  _$jscoverage['modules/model.js'][58] = 0;
+  _$jscoverage['modules/model.js'][59] = 0;
   _$jscoverage['modules/model.js'][60] = 0;
-  _$jscoverage['modules/model.js'][62] = 0;
   _$jscoverage['modules/model.js'][64] = 0;
-  _$jscoverage['modules/model.js'][67] = 0;
-  _$jscoverage['modules/model.js'][72] = 0;
+  _$jscoverage['modules/model.js'][71] = 0;
   _$jscoverage['modules/model.js'][73] = 0;
+  _$jscoverage['modules/model.js'][74] = 0;
+  _$jscoverage['modules/model.js'][80] = 0;
+  _$jscoverage['modules/model.js'][89] = 0;
+  _$jscoverage['modules/model.js'][90] = 0;
+  _$jscoverage['modules/model.js'][91] = 0;
+  _$jscoverage['modules/model.js'][95] = 0;
+  _$jscoverage['modules/model.js'][99] = 0;
+  _$jscoverage['modules/model.js'][100] = 0;
+  _$jscoverage['modules/model.js'][101] = 0;
+  _$jscoverage['modules/model.js'][102] = 0;
+  _$jscoverage['modules/model.js'][103] = 0;
+  _$jscoverage['modules/model.js'][112] = 0;
+  _$jscoverage['modules/model.js'][113] = 0;
+  _$jscoverage['modules/model.js'][114] = 0;
+  _$jscoverage['modules/model.js'][119] = 0;
+  _$jscoverage['modules/model.js'][121] = 0;
+  _$jscoverage['modules/model.js'][123] = 0;
+  _$jscoverage['modules/model.js'][126] = 0;
+  _$jscoverage['modules/model.js'][131] = 0;
+  _$jscoverage['modules/model.js'][132] = 0;
 }
 _$jscoverage['modules/model.js'][1]++;
 (function (plastic) {
   _$jscoverage['modules/model.js'][3]++;
   function plasticModule() {
-    _$jscoverage['modules/model.js'][5]++;
-    var Model;
-    _$jscoverage['modules/model.js'][6]++;
-    var functions = {model: (function (context, model) {
-  _$jscoverage['modules/model.js'][13]++;
-  if (model) {
-    _$jscoverage['modules/model.js'][14]++;
-    Model = model;
-  }
+    _$jscoverage['modules/model.js'][4]++;
+    var plastic = this, store = plastic.store = [];
+    _$jscoverage['modules/model.js'][11]++;
+    var functions = {create: (function () {
   _$jscoverage['modules/model.js'][16]++;
-  return this.chain;
-}), create: (function () {
-  _$jscoverage['modules/model.js'][22]++;
-  if (typeof Model === "function") {
-    _$jscoverage['modules/model.js'][23]++;
-    var construstor = functionnalConstructor(Model);
-    _$jscoverage['modules/model.js'][25]++;
+  if (typeof plastic.Model === "function") {
+    _$jscoverage['modules/model.js'][17]++;
+    var construstor = functionnalConstructor(plastic.Model);
+    _$jscoverage['modules/model.js'][19]++;
     var args = Array.prototype.slice.call(arguments, 1);
-    _$jscoverage['modules/model.js'][26]++;
-    var model = construstor.apply(this, args);
-    _$jscoverage['modules/model.js'][28]++;
-    this.rootContext.push(model);
-    _$jscoverage['modules/model.js'][30]++;
-    return this.next([model]);
+    _$jscoverage['modules/model.js'][20]++;
+    var item = construstor.apply(this, args);
+    _$jscoverage['modules/model.js'][22]++;
+    this.store.push(plastic.item);
+    _$jscoverage['modules/model.js'][23]++;
+    this.data([model]);
   }
-  else {
+}), createAll: (function (values) {
+  _$jscoverage['modules/model.js'][30]++;
+  var newItems = [];
+  _$jscoverage['modules/model.js'][31]++;
+  for (var i = 0; i < values.length; i = i + 1) {
     _$jscoverage['modules/model.js'][32]++;
-    return this.chain;
+    newItems.push(this.create().value(values[i]));
+}
+  _$jscoverage['modules/model.js'][38]++;
+  this.data(newItems);
+}), value_i18n: (function (locale, newValues) {
+  _$jscoverage['modules/model.js'][45]++;
+  var item_i18n = {}, item = this[0];
+  _$jscoverage['modules/model.js'][48]++;
+  if (typeof newValues === "object") {
+    _$jscoverage['modules/model.js'][49]++;
+    item = mergeObj(item, newValues);
   }
+  _$jscoverage['modules/model.js'][53]++;
+  for (var attr in item) {
+    _$jscoverage['modules/model.js'][55]++;
+    item_i18n[attr] = item[attr];
+    _$jscoverage['modules/model.js'][57]++;
+    if (typeof item[attr + "_i18n"] === "object") {
+      _$jscoverage['modules/model.js'][58]++;
+      i18nValue = item[attr + "_i18n"][locale];
+      _$jscoverage['modules/model.js'][59]++;
+      if (typeof i18nValue !== "undefined") {
+        _$jscoverage['modules/model.js'][60]++;
+        item_i18n[attr] = i18nValue;
+      }
+    }
+}
+  _$jscoverage['modules/model.js'][64]++;
+  return item_i18n;
+}), values_i18n: (function (locale, newValues) {
+  _$jscoverage['modules/model.js'][71]++;
+  var i18nValues = this.slice(0);
+  _$jscoverage['modules/model.js'][73]++;
+  console.error("NOT DONE!");
+  _$jscoverage['modules/model.js'][74]++;
+  return i18nValues;
 }), all: (function all() {
-  _$jscoverage['modules/model.js'][39]++;
-  return this.next(this.rootContext);
+  _$jscoverage['modules/model.js'][80]++;
+  this.data(this.store);
 })};
-    _$jscoverage['modules/model.js'][44]++;
+    _$jscoverage['modules/model.js'][89]++;
+    this.model = (function model(model) {
+  _$jscoverage['modules/model.js'][90]++;
+  if (model) {
+    _$jscoverage['modules/model.js'][90]++;
+    plastic.Model = model;
+  }
+  _$jscoverage['modules/model.js'][91]++;
+  return this;
+});
+    _$jscoverage['modules/model.js'][95]++;
     this.use(functions);
 }
-  _$jscoverage['modules/model.js'][53]++;
+  _$jscoverage['modules/model.js'][99]++;
+  function mergeObj(obj1, obj2) {
+    _$jscoverage['modules/model.js'][100]++;
+    var obj3 = {};
+    _$jscoverage['modules/model.js'][101]++;
+    for (var attrname in obj1) {
+      _$jscoverage['modules/model.js'][101]++;
+      obj3[attrname] = obj1[attrname];
+}
+    _$jscoverage['modules/model.js'][102]++;
+    for (var attrname in obj2) {
+      _$jscoverage['modules/model.js'][102]++;
+      obj3[attrname] = obj2[attrname];
+}
+    _$jscoverage['modules/model.js'][103]++;
+    return obj3;
+}
+  _$jscoverage['modules/model.js'][112]++;
   function functionnalConstructor(Constructor) {
-    _$jscoverage['modules/model.js'][54]++;
+    _$jscoverage['modules/model.js'][113]++;
     return (function () {
-  _$jscoverage['modules/model.js'][55]++;
+  _$jscoverage['modules/model.js'][114]++;
   var args = Array.prototype.slice.call(arguments, 0), Temp = (function () {
 }), inst, ret;
-  _$jscoverage['modules/model.js'][60]++;
+  _$jscoverage['modules/model.js'][119]++;
   Temp.prototype = Constructor.prototype;
-  _$jscoverage['modules/model.js'][62]++;
+  _$jscoverage['modules/model.js'][121]++;
   inst = new Temp();
-  _$jscoverage['modules/model.js'][64]++;
+  _$jscoverage['modules/model.js'][123]++;
   ret = Constructor.apply(inst, args);
-  _$jscoverage['modules/model.js'][67]++;
+  _$jscoverage['modules/model.js'][126]++;
   return Object(ret) === ret? ret: inst;
 });
 }
-  _$jscoverage['modules/model.js'][72]++;
+  _$jscoverage['modules/model.js'][131]++;
   if (plastic) {
-    _$jscoverage['modules/model.js'][72]++;
+    _$jscoverage['modules/model.js'][131]++;
     plastic.modules.math = plasticModule;
   }
-  _$jscoverage['modules/model.js'][73]++;
+  _$jscoverage['modules/model.js'][132]++;
   if (module) {
-    _$jscoverage['modules/model.js'][73]++;
+    _$jscoverage['modules/model.js'][132]++;
     module.exports = plasticModule;
   }
 })(this.plastic);
-_$jscoverage['modules/model.js'].source = ["(function (plastic) {","","\tfunction plasticModule() {","\t\t// Model will store the model object specified for each plastic instance","\t\tvar Model;","\t\tvar functions = {","\t\t\t/**","\t\t\t * Specify the constructor for creating new instance of the model","\t\t\t * @param context","\t\t\t * @param model","\t\t\t */","\t\t\tmodel: function (context, model) {","\t\t\t\tif (model) {","\t\t\t\t\tModel = model;","\t\t\t\t}","\t\t\t\treturn this.chain;","\t\t\t},","\t\t\t/**","\t\t\t * Create a new model instance and adds it to both the root context and current context","\t\t\t */","\t\t\tcreate: function () {","\t\t\t\tif (typeof Model === \"function\") {","\t\t\t\t\tvar construstor = functionnalConstructor(Model);","\t\t\t\t\t// Cut out the context argument","\t\t\t\t\tvar args = Array.prototype.slice.call(arguments, 1);","\t\t\t\t\tvar model = construstor.apply(this, args);","\t\t\t\t\t// Add the new instance to the rootContext","\t\t\t\t\tthis.rootContext.push(model);","\t\t\t\t\t// And also pass it as the next context","\t\t\t\t\treturn this.next([model]);","\t\t\t\t} else {","\t\t\t\t\treturn this.chain;","\t\t\t\t}","\t\t\t},","\t\t\t/**","\t\t\t * Return a new context with all the items in it","\t\t\t */","\t\t\tall: function all() {","\t\t\t\treturn this.next(this.rootContext);","\t\t\t}","\t\t};","","\t\t// Add the model functions","\t\tthis.use(functions);","\t}","","\t/**","\t * Transform a constructor so that it can be call like a normal function","\t * without changing its original behavior","\t * (without the \"new\" instruction)","\t * @param Constructor","\t */","\tfunction functionnalConstructor(Constructor) {","\t\treturn function() {","\t\t\tvar args = Array.prototype.slice.call(arguments, 0),","\t\t\t\tTemp = function () {}, // temporary constructor","\t\t\t\tinst,","\t\t\t\tret;","\t\t\t// Give the Temp constructor the Constructor's prototype","\t\t\tTemp.prototype = Constructor.prototype;","\t\t\t// Create a new instance","\t\t\tinst = new Temp;","\t\t\t// Call the original Constructor with the temp instance as its context (i.e. its 'this' value)","\t\t\tret = Constructor.apply(inst, args);","\t\t\t// If an object has been returned then return it otherwise return the original instance.","\t\t\t// (consistent with behaviour of the new operator)","\t\t\treturn Object(ret) === ret ? ret : inst;","\t\t}","\t}","","\t// Export as either a global or a module","\tif (plastic) plastic.modules.math = plasticModule;","\tif (module) module.exports = plasticModule;","","})(this.plastic);",""];
+_$jscoverage['modules/model.js'].source = ["(function (plastic) {","","\tfunction plasticModule() {","\t\tvar","\t\t\t\tplastic = this,","\t\t\t\tstore = plastic.store = [];","","\t\t// Model will store the model object specified for each plastic instance","","","\t\tvar functions = {","\t\t\t/**","\t\t\t * Create a new model instance and adds it to both the store and current data set","\t\t\t */","\t\t\tcreate: function () {","\t\t\t\tif (typeof plastic.Model === \"function\") {","\t\t\t\t\tvar construstor = functionnalConstructor(plastic.Model);","\t\t\t\t\t// Cut out the context argument","\t\t\t\t\tvar args = Array.prototype.slice.call(arguments, 1);","\t\t\t\t\tvar item = construstor.apply(this, args);","\t\t\t\t\t// Add the new instance to the store","\t\t\t\t\tthis.store.push(plastic.item);","\t\t\t\t\tthis.data([model]);","\t\t\t\t}","\t\t\t},","\t\t\t/**","\t\t\t * Create multiple instances a set their values","\t\t\t */","\t\t\tcreateAll: function (values) {","\t\t\t\tvar newItems = [];","\t\t\t\tfor (var i = 0; i &lt; values.length; i = i + 1) {","\t\t\t\t\tnewItems.push(","\t\t\t\t\t\t\tthis","\t\t\t\t\t\t\t\t\t.create()","\t\t\t\t\t\t\t\t\t.value(values[i])","\t\t\t\t\t);","\t\t\t\t}","\t\t\t\tthis.data(newItems);","\t\t\t},","\t\t\t/**","\t\t\t * Return the value of the first item in the context","\t\t\t * @param context","\t\t\t */","\t\t\tvalue_i18n: function (locale, newValues) {","\t\t\t\tvar item_i18n = {},","\t\t\t\t\titem = this[0];","\t\t\t\t// Set stuff","\t\t\t\tif (typeof newValues === \"object\") {","\t\t\t\t\titem = mergeObj(item,newValues)","\t\t\t\t}","","\t\t\t\t// iterate each attribute on item","\t\t\t\tfor (var attr in item) {","\t\t\t\t\t// Get the default value","\t\t\t\t\titem_i18n[attr] = item[attr];","\t\t\t\t\t// Try to get a localised value","\t\t\t\t\tif (typeof item[attr + \"_i18n\"] === \"object\" ) {","\t\t\t\t\t\ti18nValue = item[attr + \"_i18n\"][locale];","\t\t\t\t\t\tif (typeof i18nValue !== \"undefined\") {","\t\t\t\t\t\t\titem_i18n[attr] = i18nValue;","\t\t\t\t\t\t}","\t\t\t\t\t}","\t\t\t\t}","\t\t\t\treturn item_i18n;","\t\t\t},","\t\t\t/**","\t\t\t * Return a array copy of the context","\t\t\t * @param context","\t\t\t */","\t\t\tvalues_i18n: function (locale, newValues) {","\t\t\t\tvar i18nValues = this.slice(0);","\t\t\t\t","\t\t\t\tconsole.error(\"NOT DONE!\");","\t\t\t\treturn i18nValues;","\t\t\t},","\t\t\t/**","\t\t\t * Return a new context with all the items in it","\t\t\t */","\t\t\tall: function all() {","\t\t\t\tthis.data(this.store);","\t\t\t}","\t\t};","","\t\t/**","\t\t * Specify the constructor for creating new instance of the model","\t\t * @param context","\t\t * @param model","\t\t */","\t\tthis.model = function model(model) {","\t\t\tif (model) plastic.Model = model;","\t\t\treturn this;","\t\t};","","\t\t// Add the model functions","\t\tthis.use(functions);","\t}","","\t//todo: change this merge function...","\tfunction mergeObj(obj1,obj2){","\t\tvar obj3 = {};","\t    for (var attrname in obj1) { obj3[attrname] = obj1[attrname]; }","\t    for (var attrname in obj2) { obj3[attrname] = obj2[attrname]; }","\t    return obj3;","\t}","","\t/**","\t * Transform a constructor so that it can be call like a normal function","\t * without changing its original behavior","\t * (without the \"new\" instruction)","\t * @param Constructor","\t */","\tfunction functionnalConstructor(Constructor) {","\t\treturn function() {","\t\t\tvar args = Array.prototype.slice.call(arguments, 0),","\t\t\t\tTemp = function () {}, // temporary constructor","\t\t\t\tinst,","\t\t\t\tret;","\t\t\t// Give the Temp constructor the Constructor's prototype","\t\t\tTemp.prototype = Constructor.prototype;","\t\t\t// Create a new instance","\t\t\tinst = new Temp;","\t\t\t// Call the original Constructor with the temp instance as its context (i.e. its 'this' value)","\t\t\tret = Constructor.apply(inst, args);","\t\t\t// If an object has been returned then return it otherwise return the original instance.","\t\t\t// (consistent with behaviour of the new operator)","\t\t\treturn Object(ret) === ret ? ret : inst;","\t\t}","\t}","","\t// Export as either a global or a module","\tif (plastic) plastic.modules.math = plasticModule;","\tif (module) module.exports = plasticModule;","","})(this.plastic);",""];

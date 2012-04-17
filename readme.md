@@ -29,8 +29,8 @@ Once this is done, you can use the colorizer object and start chaining function
 calls:
 
 	var mainColor = "#6666FF"; // Light blue
-	var shadow = colorizer.take(mainColor).darker(0.5).value(); // darker blue
-	var lightGreen = colorizer
+	var shadow = colorizer().take(mainColor).darker(0.5).value(); // darker blue
+	var lightGreen = colorizer()
 		.take(mainColor)
 		.lighter(0.5)
 		.red(0.5)
@@ -38,7 +38,7 @@ calls:
 
 And you can also parse multiple colors at the same time:
 
-	var redGradient = colorizer
+	var redGradient = colorizer()
 		.take("#333")
 		.take("#666")
 		.take("#999")
@@ -68,12 +68,16 @@ Soon, I hope to have a more complete documentation.
 ## Tests
 
 Even if the tests are not extensive yet, I try to keep the test coverage at 100%.
-You can use vows to run the tests. The "lib-cov" folder contains the instrumented
+You can use "mocha" to run the tests. The "lib-cov" folder contains the instrumented
 version of the code in order to obtain the html code-coverage report during tests.
 
 ### Commands to start unit tests
 	rm -rf lib-cov
 	node-jscoverage lib lib-cov
-	vows --spec --cover-html
+	mocha --reporter spec
+	mocha --reporter html-cov test/math.js > coverage.html
 
-With these commands, vows will have create a "coverage.html" in the same folder.
+#### One-liner
+	rm -rf lib-cov;node-jscoverage lib lib-cov;mocha --reporter spec;mocha --reporter html-cov > coverage.html
+
+With these commands, you will obtain a detailed test result and it will have create a "coverage.html" in the same folder.

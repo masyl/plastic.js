@@ -2,349 +2,522 @@
 if (typeof _$jscoverage === 'undefined') _$jscoverage = {};
 if (! _$jscoverage['plastic.js']) {
   _$jscoverage['plastic.js'] = [];
-  _$jscoverage['plastic.js'][32] = 0;
-  _$jscoverage['plastic.js'][35] = 0;
-  _$jscoverage['plastic.js'][42] = 0;
+  _$jscoverage['plastic.js'][47] = 0;
   _$jscoverage['plastic.js'][50] = 0;
-  _$jscoverage['plastic.js'][51] = 0;
-  _$jscoverage['plastic.js'][53] = 0;
-  _$jscoverage['plastic.js'][55] = 0;
-  _$jscoverage['plastic.js'][56] = 0;
   _$jscoverage['plastic.js'][57] = 0;
-  _$jscoverage['plastic.js'][59] = 0;
-  _$jscoverage['plastic.js'][61] = 0;
-  _$jscoverage['plastic.js'][62] = 0;
+  _$jscoverage['plastic.js'][63] = 0;
+  _$jscoverage['plastic.js'][64] = 0;
   _$jscoverage['plastic.js'][67] = 0;
-  _$jscoverage['plastic.js'][68] = 0;
+  _$jscoverage['plastic.js'][69] = 0;
+  _$jscoverage['plastic.js'][71] = 0;
   _$jscoverage['plastic.js'][72] = 0;
   _$jscoverage['plastic.js'][73] = 0;
-  _$jscoverage['plastic.js'][74] = 0;
+  _$jscoverage['plastic.js'][78] = 0;
+  _$jscoverage['plastic.js'][79] = 0;
   _$jscoverage['plastic.js'][80] = 0;
   _$jscoverage['plastic.js'][81] = 0;
   _$jscoverage['plastic.js'][82] = 0;
-  _$jscoverage['plastic.js'][87] = 0;
+  _$jscoverage['plastic.js'][84] = 0;
+  _$jscoverage['plastic.js'][85] = 0;
+  _$jscoverage['plastic.js'][86] = 0;
+  _$jscoverage['plastic.js'][89] = 0;
   _$jscoverage['plastic.js'][91] = 0;
+  _$jscoverage['plastic.js'][92] = 0;
+  _$jscoverage['plastic.js'][94] = 0;
+  _$jscoverage['plastic.js'][95] = 0;
   _$jscoverage['plastic.js'][98] = 0;
   _$jscoverage['plastic.js'][99] = 0;
   _$jscoverage['plastic.js'][100] = 0;
-  _$jscoverage['plastic.js'][101] = 0;
   _$jscoverage['plastic.js'][102] = 0;
-  _$jscoverage['plastic.js'][104] = 0;
-  _$jscoverage['plastic.js'][106] = 0;
-  _$jscoverage['plastic.js'][107] = 0;
+  _$jscoverage['plastic.js'][103] = 0;
   _$jscoverage['plastic.js'][108] = 0;
   _$jscoverage['plastic.js'][111] = 0;
+  _$jscoverage['plastic.js'][112] = 0;
+  _$jscoverage['plastic.js'][113] = 0;
   _$jscoverage['plastic.js'][114] = 0;
+  _$jscoverage['plastic.js'][116] = 0;
+  _$jscoverage['plastic.js'][117] = 0;
+  _$jscoverage['plastic.js'][121] = 0;
   _$jscoverage['plastic.js'][124] = 0;
   _$jscoverage['plastic.js'][125] = 0;
-  _$jscoverage['plastic.js'][126] = 0;
-  _$jscoverage['plastic.js'][127] = 0;
+  _$jscoverage['plastic.js'][128] = 0;
+  _$jscoverage['plastic.js'][129] = 0;
+  _$jscoverage['plastic.js'][130] = 0;
+  _$jscoverage['plastic.js'][132] = 0;
+  _$jscoverage['plastic.js'][136] = 0;
   _$jscoverage['plastic.js'][138] = 0;
-  _$jscoverage['plastic.js'][139] = 0;
-  _$jscoverage['plastic.js'][147] = 0;
-  _$jscoverage['plastic.js'][148] = 0;
+  _$jscoverage['plastic.js'][140] = 0;
+  _$jscoverage['plastic.js'][145] = 0;
   _$jscoverage['plastic.js'][149] = 0;
-  _$jscoverage['plastic.js'][150] = 0;
-  _$jscoverage['plastic.js'][151] = 0;
-  _$jscoverage['plastic.js'][152] = 0;
   _$jscoverage['plastic.js'][161] = 0;
   _$jscoverage['plastic.js'][162] = 0;
-  _$jscoverage['plastic.js'][166] = 0;
-  _$jscoverage['plastic.js'][167] = 0;
   _$jscoverage['plastic.js'][169] = 0;
+  _$jscoverage['plastic.js'][170] = 0;
   _$jscoverage['plastic.js'][171] = 0;
+  _$jscoverage['plastic.js'][172] = 0;
   _$jscoverage['plastic.js'][173] = 0;
-  _$jscoverage['plastic.js'][176] = 0;
+  _$jscoverage['plastic.js'][174] = 0;
+  _$jscoverage['plastic.js'][175] = 0;
   _$jscoverage['plastic.js'][177] = 0;
   _$jscoverage['plastic.js'][178] = 0;
   _$jscoverage['plastic.js'][179] = 0;
-  _$jscoverage['plastic.js'][183] = 0;
+  _$jscoverage['plastic.js'][182] = 0;
+  _$jscoverage['plastic.js'][184] = 0;
   _$jscoverage['plastic.js'][185] = 0;
   _$jscoverage['plastic.js'][186] = 0;
-  _$jscoverage['plastic.js'][189] = 0;
+  _$jscoverage['plastic.js'][187] = 0;
   _$jscoverage['plastic.js'][191] = 0;
   _$jscoverage['plastic.js'][192] = 0;
   _$jscoverage['plastic.js'][193] = 0;
+  _$jscoverage['plastic.js'][194] = 0;
+  _$jscoverage['plastic.js'][195] = 0;
+  _$jscoverage['plastic.js'][198] = 0;
+  _$jscoverage['plastic.js'][200] = 0;
   _$jscoverage['plastic.js'][201] = 0;
-  _$jscoverage['plastic.js'][202] = 0;
-  _$jscoverage['plastic.js'][203] = 0;
   _$jscoverage['plastic.js'][204] = 0;
-  _$jscoverage['plastic.js'][206] = 0;
-  _$jscoverage['plastic.js'][208] = 0;
+  _$jscoverage['plastic.js'][210] = 0;
   _$jscoverage['plastic.js'][211] = 0;
-  _$jscoverage['plastic.js'][216] = 0;
-  _$jscoverage['plastic.js'][220] = 0;
-  _$jscoverage['plastic.js'][221] = 0;
-  _$jscoverage['plastic.js'][222] = 0;
-  _$jscoverage['plastic.js'][224] = 0;
-  _$jscoverage['plastic.js'][225] = 0;
+  _$jscoverage['plastic.js'][212] = 0;
+  _$jscoverage['plastic.js'][215] = 0;
+  _$jscoverage['plastic.js'][217] = 0;
+  _$jscoverage['plastic.js'][227] = 0;
   _$jscoverage['plastic.js'][228] = 0;
-  _$jscoverage['plastic.js'][232] = 0;
-  _$jscoverage['plastic.js'][237] = 0;
-  _$jscoverage['plastic.js'][238] = 0;
-  _$jscoverage['plastic.js'][240] = 0;
-  _$jscoverage['plastic.js'][244] = 0;
-  _$jscoverage['plastic.js'][249] = 0;
+  _$jscoverage['plastic.js'][229] = 0;
+  _$jscoverage['plastic.js'][230] = 0;
+  _$jscoverage['plastic.js'][241] = 0;
+  _$jscoverage['plastic.js'][242] = 0;
+  _$jscoverage['plastic.js'][250] = 0;
   _$jscoverage['plastic.js'][251] = 0;
-  _$jscoverage['plastic.js'][257] = 0;
+  _$jscoverage['plastic.js'][252] = 0;
+  _$jscoverage['plastic.js'][258] = 0;
+  _$jscoverage['plastic.js'][261] = 0;
+  _$jscoverage['plastic.js'][263] = 0;
   _$jscoverage['plastic.js'][264] = 0;
+  _$jscoverage['plastic.js'][265] = 0;
+  _$jscoverage['plastic.js'][266] = 0;
+  _$jscoverage['plastic.js'][267] = 0;
+  _$jscoverage['plastic.js'][270] = 0;
+  _$jscoverage['plastic.js'][271] = 0;
   _$jscoverage['plastic.js'][272] = 0;
   _$jscoverage['plastic.js'][273] = 0;
-  _$jscoverage['plastic.js'][274] = 0;
-  _$jscoverage['plastic.js'][283] = 0;
-  _$jscoverage['plastic.js'][284] = 0;
-  _$jscoverage['plastic.js'][293] = 0;
+  _$jscoverage['plastic.js'][276] = 0;
+  _$jscoverage['plastic.js'][278] = 0;
+  _$jscoverage['plastic.js'][279] = 0;
+  _$jscoverage['plastic.js'][281] = 0;
+  _$jscoverage['plastic.js'][289] = 0;
+  _$jscoverage['plastic.js'][290] = 0;
+  _$jscoverage['plastic.js'][291] = 0;
+  _$jscoverage['plastic.js'][292] = 0;
   _$jscoverage['plastic.js'][294] = 0;
   _$jscoverage['plastic.js'][296] = 0;
   _$jscoverage['plastic.js'][298] = 0;
-  _$jscoverage['plastic.js'][304] = 0;
+  _$jscoverage['plastic.js'][303] = 0;
   _$jscoverage['plastic.js'][305] = 0;
+  _$jscoverage['plastic.js'][308] = 0;
+  _$jscoverage['plastic.js'][315] = 0;
+  _$jscoverage['plastic.js'][317] = 0;
+  _$jscoverage['plastic.js'][322] = 0;
+  _$jscoverage['plastic.js'][325] = 0;
+  _$jscoverage['plastic.js'][326] = 0;
+  _$jscoverage['plastic.js'][327] = 0;
+  _$jscoverage['plastic.js'][328] = 0;
+  _$jscoverage['plastic.js'][329] = 0;
+  _$jscoverage['plastic.js'][334] = 0;
+  _$jscoverage['plastic.js'][337] = 0;
+  _$jscoverage['plastic.js'][339] = 0;
+  _$jscoverage['plastic.js'][340] = 0;
+  _$jscoverage['plastic.js'][341] = 0;
+  _$jscoverage['plastic.js'][342] = 0;
+  _$jscoverage['plastic.js'][343] = 0;
+  _$jscoverage['plastic.js'][347] = 0;
+  _$jscoverage['plastic.js'][354] = 0;
+  _$jscoverage['plastic.js'][361] = 0;
+  _$jscoverage['plastic.js'][370] = 0;
+  _$jscoverage['plastic.js'][379] = 0;
+  _$jscoverage['plastic.js'][386] = 0;
+  _$jscoverage['plastic.js'][392] = 0;
+  _$jscoverage['plastic.js'][393] = 0;
+  _$jscoverage['plastic.js'][396] = 0;
+  _$jscoverage['plastic.js'][397] = 0;
+  _$jscoverage['plastic.js'][398] = 0;
+  _$jscoverage['plastic.js'][399] = 0;
 }
-_$jscoverage['plastic.js'][32]++;
+_$jscoverage['plastic.js'][47]++;
 (function () {
-  _$jscoverage['plastic.js'][35]++;
+  _$jscoverage['plastic.js'][50]++;
   function plastic(functionsOrModule) {
-    _$jscoverage['plastic.js'][42]++;
-    function plasticFactory() {
-      _$jscoverage['plastic.js'][50]++;
-      function Chain(rootContext, contextInput) {
-        _$jscoverage['plastic.js'][51]++;
-        var chain = this;
-        _$jscoverage['plastic.js'][53]++;
-        this.context = [];
-        _$jscoverage['plastic.js'][55]++;
-        this.rootContext = rootContext;
-        _$jscoverage['plastic.js'][56]++;
-        this.next = (function next(newContext) {
-  _$jscoverage['plastic.js'][57]++;
-  return new Chain(chain.rootContext, newContext);
-});
-        _$jscoverage['plastic.js'][59]++;
-        if (contextInput) {
-          _$jscoverage['plastic.js'][61]++;
-          for (var i = 0; i < contextInput.length; i = i + 1) {
-            _$jscoverage['plastic.js'][62]++;
-            this.context.push(contextInput[i]);
-}
-        }
-}
-      _$jscoverage['plastic.js'][67]++;
-      Chain.prototype.emit = (function (functionName, args, _prefix) {
-  _$jscoverage['plastic.js'][68]++;
-  var listener, chain = this, prefix = _prefix? _prefix + ":": "";
-  _$jscoverage['plastic.js'][72]++;
-  listener = plasticFactory.listeners[(prefix || "") + functionName];
-  _$jscoverage['plastic.js'][73]++;
-  if (listener) {
-    _$jscoverage['plastic.js'][74]++;
-    listener.apply(chain, args);
-  }
-});
-      _$jscoverage['plastic.js'][80]++;
-      for (var functionName in plasticFactory.fn) {
-        _$jscoverage['plastic.js'][81]++;
-        if (plasticFactory.fn.hasOwnProperty(functionName)) {
-          _$jscoverage['plastic.js'][82]++;
-          Chain.prototype[functionName] = plasticFactory.fn[functionName];
-        }
-}
-      _$jscoverage['plastic.js'][87]++;
-      return new Chain([]);
-}
-    _$jscoverage['plastic.js'][91]++;
-    plasticFactory.fn = {};
-    _$jscoverage['plastic.js'][98]++;
-    plasticFactory.use = (function (nameOrObj, handler) {
-  _$jscoverage['plastic.js'][99]++;
-  var obj = {};
-  _$jscoverage['plastic.js'][100]++;
-  if (typeof handler === "function") {
-    _$jscoverage['plastic.js'][101]++;
-    obj = {};
-    _$jscoverage['plastic.js'][102]++;
-    obj[nameOrObj] = handler;
+    _$jscoverage['plastic.js'][57]++;
+    function Plastic() {
+      _$jscoverage['plastic.js'][63]++;
+      function Chain(data) {
+        _$jscoverage['plastic.js'][64]++;
+        var chain = [];
+        _$jscoverage['plastic.js'][67]++;
+        chain.Chain = Chain;
+        _$jscoverage['plastic.js'][69]++;
+        chain.Plastic = Plastic;
+        _$jscoverage['plastic.js'][71]++;
+        chain.async = [];
+        _$jscoverage['plastic.js'][72]++;
+        chain.asyncStarted = false;
+        _$jscoverage['plastic.js'][73]++;
+        chain.asyncDone = null;
+        _$jscoverage['plastic.js'][78]++;
+        chain.asyncStep = (function () {
+  _$jscoverage['plastic.js'][79]++;
+  if (chain.async.length > 0) {
+    _$jscoverage['plastic.js'][80]++;
+    var handler = chain.async.shift();
+    _$jscoverage['plastic.js'][81]++;
+    handler((function (err, newContext) {
+  _$jscoverage['plastic.js'][82]++;
+  if (err) {
+    _$jscoverage['plastic.js'][84]++;
+    chain.async.length = 0;
+    _$jscoverage['plastic.js'][85]++;
+    chain.asyncStarted = false;
+    _$jscoverage['plastic.js'][86]++;
+    if (chain.asyncDone) {
+      _$jscoverage['plastic.js'][86]++;
+      chain.asyncDone(err);
+    }
   }
   else {
-    _$jscoverage['plastic.js'][104]++;
-    obj = nameOrObj;
-  }
-  _$jscoverage['plastic.js'][106]++;
-  for (var functionName in obj) {
-    _$jscoverage['plastic.js'][107]++;
-    if (obj.hasOwnProperty(functionName)) {
-      _$jscoverage['plastic.js'][108]++;
-      this.fn[functionName] = wrapper(functionName, obj[functionName]);
-    }
+    _$jscoverage['plastic.js'][89]++;
+    chain.length = 0;
+    _$jscoverage['plastic.js'][91]++;
+    for (var i = 0; i < newContext.length; i = i + 1) {
+      _$jscoverage['plastic.js'][92]++;
+      chain.push(newContext[i]);
 }
-  _$jscoverage['plastic.js'][111]++;
-  return this;
-});
-    _$jscoverage['plastic.js'][114]++;
-    plasticFactory.listeners = {};
-    _$jscoverage['plastic.js'][124]++;
-    plasticFactory.on = (function (functionName, handler, _prefix) {
-  _$jscoverage['plastic.js'][125]++;
-  var prefix = _prefix? _prefix + ":": "";
-  _$jscoverage['plastic.js'][126]++;
-  if (functionName && handler) {
-    _$jscoverage['plastic.js'][127]++;
-    plasticFactory.listeners[prefix + functionName] = handler;
+    _$jscoverage['plastic.js'][94]++;
+    process.nextTick((function () {
+  _$jscoverage['plastic.js'][95]++;
+  chain.asyncStep();
+}));
   }
+  _$jscoverage['plastic.js'][98]++;
+  if (chain.async.length === 0) {
+    _$jscoverage['plastic.js'][99]++;
+    chain.asyncStarted = false;
+    _$jscoverage['plastic.js'][100]++;
+    if (chain.asyncDone) {
+      _$jscoverage['plastic.js'][100]++;
+      chain.asyncDone(null, chain);
+    }
+  }
+  else {
+    _$jscoverage['plastic.js'][102]++;
+    process.nextTick((function () {
+  _$jscoverage['plastic.js'][103]++;
+  chain.asyncStep();
+}));
+  }
+}));
+  }
+  _$jscoverage['plastic.js'][108]++;
+  return chain;
 });
-    _$jscoverage['plastic.js'][138]++;
-    plasticFactory.onEach = (function (handlerName, handler) {
-  _$jscoverage['plastic.js'][139]++;
-  plasticFactory.on(handlerName, handler, "each");
+        _$jscoverage['plastic.js'][111]++;
+        chain.data = (function data(data) {
+  _$jscoverage['plastic.js'][112]++;
+  chain.length = 0;
+  _$jscoverage['plastic.js'][113]++;
+  if (typeof data === "object") {
+    _$jscoverage['plastic.js'][114]++;
+    if (data.constructor.name === "Array") {
+      _$jscoverage['plastic.js'][116]++;
+      for (var i = 0; i < data.length; i = i + 1) {
+        _$jscoverage['plastic.js'][117]++;
+        chain.push(data[i]);
+}
+    }
+  }
+  _$jscoverage['plastic.js'][121]++;
+  return chain;
 });
-    _$jscoverage['plastic.js'][147]++;
-    function wrapper(handlerName, handler) {
-      _$jscoverage['plastic.js'][148]++;
-      return (function () {
-  _$jscoverage['plastic.js'][149]++;
-  var chain = this;
-  _$jscoverage['plastic.js'][150]++;
-  var args = Array.prototype.slice.call(arguments, 0);
-  _$jscoverage['plastic.js'][151]++;
-  args.unshift(chain.context);
-  _$jscoverage['plastic.js'][152]++;
-  var _this = {loop: loop, next: chain.next, chain: chain, args: args, context: chain.context, rootContext: chain.rootContext};
-  _$jscoverage['plastic.js'][161]++;
-  function loop(handler) {
-    _$jscoverage['plastic.js'][162]++;
-    var newContext = [], returnValue, contextItem, loopArgs = args.slice(1);
-    _$jscoverage['plastic.js'][166]++;
-    for (var i = 0; i < chain.context.length; i = i + 1) {
-      _$jscoverage['plastic.js'][167]++;
-      contextItem = chain.context[i];
-      _$jscoverage['plastic.js'][169]++;
-      loopArgs.unshift(contextItem);
-      _$jscoverage['plastic.js'][171]++;
-      chain.emit.call(_this, handlerName, loopArgs, "each");
+        _$jscoverage['plastic.js'][124]++;
+        chain.emit = (function (functionName, args, _prefix) {
+  _$jscoverage['plastic.js'][125]++;
+  var listener, prefix = _prefix? _prefix + ":": "";
+  _$jscoverage['plastic.js'][128]++;
+  listener = Plastic.listeners[(prefix || "") + functionName];
+  _$jscoverage['plastic.js'][129]++;
+  if (listener) {
+    _$jscoverage['plastic.js'][130]++;
+    listener.apply(chain, args);
+  }
+  _$jscoverage['plastic.js'][132]++;
+  return chain;
+});
+        _$jscoverage['plastic.js'][136]++;
+        extend(chain, Plastic.fn);
+        _$jscoverage['plastic.js'][138]++;
+        chain.data(data);
+        _$jscoverage['plastic.js'][140]++;
+        return chain;
+}
+      _$jscoverage['plastic.js'][145]++;
+      return Chain();
+}
+    _$jscoverage['plastic.js'][149]++;
+    Plastic.fn = {};
+    _$jscoverage['plastic.js'][161]++;
+    Plastic.use = (function () {
+  _$jscoverage['plastic.js'][162]++;
+  var args = arguments, async = args[1] || false, constructor, obj, modules;
+  _$jscoverage['plastic.js'][169]++;
+  constructor = args[0].constructor.name;
+  _$jscoverage['plastic.js'][170]++;
+  if (constructor === "Array") {
+    _$jscoverage['plastic.js'][171]++;
+    modules = args[0];
+  }
+  else {
+    _$jscoverage['plastic.js'][172]++;
+    if (constructor === "String") {
       _$jscoverage['plastic.js'][173]++;
-      returnValue = handler.apply(_this, loopArgs);
-      _$jscoverage['plastic.js'][176]++;
-      if (typeof returnValue === "undefined" || returnValue === true) {
-        _$jscoverage['plastic.js'][177]++;
-        newContext.push(contextItem);
-      }
-      else {
-        _$jscoverage['plastic.js'][178]++;
-        if (returnValue !== false) {
+      if (args.length === 2) {
+        _$jscoverage['plastic.js'][174]++;
+        constructor = args[1].constructor.name;
+        _$jscoverage['plastic.js'][175]++;
+        if (constructor === "Function") {
+          _$jscoverage['plastic.js'][177]++;
+          obj = {};
+          _$jscoverage['plastic.js'][178]++;
+          obj[args[0]] = args[1];
           _$jscoverage['plastic.js'][179]++;
-          newContext.push(returnValue);
+          async = args[2] || false;
         }
       }
-      _$jscoverage['plastic.js'][183]++;
-      loopArgs.shift(contextItem);
-}
-    _$jscoverage['plastic.js'][185]++;
-    var newChain = new chain.constructor(chain.rootContext, newContext);
-    _$jscoverage['plastic.js'][186]++;
-    return newChain;
-}
-  _$jscoverage['plastic.js'][189]++;
-  chain.emit.call(_this, handlerName, args);
+      else {
+        _$jscoverage['plastic.js'][182]++;
+        modules = [args[0]];
+      }
+    }
+    else {
+      _$jscoverage['plastic.js'][184]++;
+      if (constructor === "Function") {
+        _$jscoverage['plastic.js'][185]++;
+        modules = [args[0]];
+      }
+      else {
+        _$jscoverage['plastic.js'][186]++;
+        if (constructor === "Object") {
+          _$jscoverage['plastic.js'][187]++;
+          obj = args[0];
+        }
+      }
+    }
+  }
   _$jscoverage['plastic.js'][191]++;
-  var newChainOrReturnValue = handler.apply(_this, args);
+  var i;
   _$jscoverage['plastic.js'][192]++;
-  args.pop();
-  _$jscoverage['plastic.js'][193]++;
+  if (obj) {
+    _$jscoverage['plastic.js'][193]++;
+    for (i in obj) {
+      _$jscoverage['plastic.js'][194]++;
+      if (obj.hasOwnProperty(i)) {
+        _$jscoverage['plastic.js'][195]++;
+        this.fn[i] = wrapper(i, obj[i], async);
+      }
+}
+  }
+  else {
+    _$jscoverage['plastic.js'][198]++;
+    if (modules) {
+      _$jscoverage['plastic.js'][200]++;
+      for (i = 0; i < modules.length; i = i + 1) {
+        _$jscoverage['plastic.js'][201]++;
+        loadModule(modules[i]);
+}
+    }
+  }
+  _$jscoverage['plastic.js'][204]++;
+  return this;
+});
+    _$jscoverage['plastic.js'][210]++;
+    Plastic.modules = {};
+    _$jscoverage['plastic.js'][211]++;
+    if (require) {
+      _$jscoverage['plastic.js'][212]++;
+      Plastic.modules = require("./modules");
+    }
+    _$jscoverage['plastic.js'][215]++;
+    Plastic.modules.core = core;
+    _$jscoverage['plastic.js'][217]++;
+    Plastic.listeners = {};
+    _$jscoverage['plastic.js'][227]++;
+    Plastic.on = (function (functionName, handler, _prefix) {
+  _$jscoverage['plastic.js'][228]++;
+  var prefix = _prefix? _prefix + ":": "";
+  _$jscoverage['plastic.js'][229]++;
+  if (functionName && handler) {
+    _$jscoverage['plastic.js'][230]++;
+    Plastic.listeners[prefix + functionName] = handler;
+  }
+});
+    _$jscoverage['plastic.js'][241]++;
+    Plastic.onEach = (function (handlerName, handler) {
+  _$jscoverage['plastic.js'][242]++;
+  Plastic.on(handlerName, handler, "each");
+});
+    _$jscoverage['plastic.js'][250]++;
+    function wrapper(handlerName, handler, isAsync) {
+      _$jscoverage['plastic.js'][251]++;
+      return (function () {
+  _$jscoverage['plastic.js'][252]++;
+  var chain = this, newChainOrReturnValue, args = Array.prototype.slice.call(arguments, 0);
+  _$jscoverage['plastic.js'][258]++;
+  chain.emit(handlerName, args);
+  _$jscoverage['plastic.js'][261]++;
+  if (isAsync) {
+    _$jscoverage['plastic.js'][263]++;
+    chain.async.push((function (callback) {
+  _$jscoverage['plastic.js'][264]++;
+  args.push(callback);
+  _$jscoverage['plastic.js'][265]++;
+  newChainOrReturnValue = handler.apply(chain, args);
+  _$jscoverage['plastic.js'][266]++;
+  if (newChainOrReturnValue === void 0) {
+    _$jscoverage['plastic.js'][266]++;
+    newChainOrReturnValue = chain;
+  }
+  _$jscoverage['plastic.js'][267]++;
+  return newChainOrReturnValue;
+}));
+    _$jscoverage['plastic.js'][270]++;
+    if (! chain.asyncStarted) {
+      _$jscoverage['plastic.js'][271]++;
+      chain.asyncStarted = true;
+      _$jscoverage['plastic.js'][272]++;
+      process.nextTick((function () {
+  _$jscoverage['plastic.js'][273]++;
+  chain.asyncStep();
+}));
+    }
+    _$jscoverage['plastic.js'][276]++;
+    newChainOrReturnValue = chain;
+  }
+  else {
+    _$jscoverage['plastic.js'][278]++;
+    newChainOrReturnValue = handler.apply(chain, args);
+    _$jscoverage['plastic.js'][279]++;
+    if (newChainOrReturnValue === void 0) {
+      _$jscoverage['plastic.js'][279]++;
+      newChainOrReturnValue = chain;
+    }
+  }
+  _$jscoverage['plastic.js'][281]++;
   return newChainOrReturnValue;
 });
 }
-    _$jscoverage['plastic.js'][201]++;
-    plasticFactory.load = (function load(moduleOrName) {
-  _$jscoverage['plastic.js'][202]++;
-  var module;
-  _$jscoverage['plastic.js'][203]++;
-  if (typeof moduleOrName === "function") {
-    _$jscoverage['plastic.js'][204]++;
-    module = moduleOrName;
-  }
-  else {
-    _$jscoverage['plastic.js'][206]++;
-    module = plastic.modules[moduleOrName];
-  }
-  _$jscoverage['plastic.js'][208]++;
-  if (module) {
-    _$jscoverage['plastic.js'][211]++;
-    module.call(plasticFactory);
-  }
-});
-    _$jscoverage['plastic.js'][216]++;
-    plasticFactory.load("core");
-    _$jscoverage['plastic.js'][220]++;
-    if (typeof functionsOrModule === "string") {
-      _$jscoverage['plastic.js'][221]++;
-      plasticFactory.load(functionsOrModule);
-    }
-    else {
-      _$jscoverage['plastic.js'][222]++;
-      if (typeof functionsOrModule === "function") {
-        _$jscoverage['plastic.js'][224]++;
-        plasticFactory.load(functionsOrModule);
+    _$jscoverage['plastic.js'][289]++;
+    function loadModule(moduleOrName) {
+      _$jscoverage['plastic.js'][290]++;
+      var module;
+      _$jscoverage['plastic.js'][291]++;
+      if (typeof moduleOrName === "function") {
+        _$jscoverage['plastic.js'][292]++;
+        module = moduleOrName;
       }
       else {
-        _$jscoverage['plastic.js'][225]++;
-        if (typeof functionsOrModule === "object") {
-          _$jscoverage['plastic.js'][228]++;
-          plasticFactory.use(functionsOrModule);
-        }
+        _$jscoverage['plastic.js'][294]++;
+        module = Plastic.modules[moduleOrName];
       }
-    }
-    _$jscoverage['plastic.js'][232]++;
-    return plasticFactory();
+      _$jscoverage['plastic.js'][296]++;
+      if (module) {
+        _$jscoverage['plastic.js'][298]++;
+        module.call(Plastic);
+      }
 }
-  _$jscoverage['plastic.js'][237]++;
-  plastic.modules = {};
-  _$jscoverage['plastic.js'][238]++;
-  if (require) {
-    _$jscoverage['plastic.js'][240]++;
-    plastic.modules = require("./modules");
-  }
-  _$jscoverage['plastic.js'][244]++;
-  plastic.modules.core = core;
-  _$jscoverage['plastic.js'][249]++;
+    _$jscoverage['plastic.js'][303]++;
+    Plastic.use("core");
+    _$jscoverage['plastic.js'][305]++;
+    if (functionsOrModule) {
+      _$jscoverage['plastic.js'][305]++;
+      Plastic.use(functionsOrModule);
+    }
+    _$jscoverage['plastic.js'][308]++;
+    return Plastic;
+}
+  _$jscoverage['plastic.js'][315]++;
   function core() {
-    _$jscoverage['plastic.js'][251]++;
-    this.use({"value": (function (context) {
-  _$jscoverage['plastic.js'][257]++;
-  return this.context[0];
-}), "values": (function (context) {
-  _$jscoverage['plastic.js'][264]++;
-  return this.context.slice(0);
-}), "take": (function (context, item) {
-  _$jscoverage['plastic.js'][272]++;
-  var next = this.next(this.context);
-  _$jscoverage['plastic.js'][273]++;
-  next.context.push(item);
-  _$jscoverage['plastic.js'][274]++;
-  return next;
-}), "tap": (function (context, handler) {
-  _$jscoverage['plastic.js'][283]++;
+    _$jscoverage['plastic.js'][317]++;
+    this.use({value: (function (newValue) {
+  _$jscoverage['plastic.js'][322]++;
+  var attr, item = this[0];
+  _$jscoverage['plastic.js'][325]++;
+  if (item !== void 0) {
+    _$jscoverage['plastic.js'][326]++;
+    if (typeof newValue === "object") {
+      _$jscoverage['plastic.js'][327]++;
+      for (attr in newValue) {
+        _$jscoverage['plastic.js'][328]++;
+        if (newValue.hasOwnProperty(attr)) {
+          _$jscoverage['plastic.js'][329]++;
+          item[attr] = newValue[attr];
+        }
+}
+    }
+  }
+  _$jscoverage['plastic.js'][334]++;
+  return item;
+}), each: (function (callback) {
+  _$jscoverage['plastic.js'][337]++;
+  var value, data = [];
+  _$jscoverage['plastic.js'][339]++;
+  if (typeof callback === "function") {
+    _$jscoverage['plastic.js'][340]++;
+    for (var i = 0; i < this.length; i = i + 1) {
+      _$jscoverage['plastic.js'][341]++;
+      value = callback.call(this, this[i]);
+      _$jscoverage['plastic.js'][342]++;
+      if (value !== void 0) {
+        _$jscoverage['plastic.js'][343]++;
+        data.push(value);
+      }
+}
+    _$jscoverage['plastic.js'][347]++;
+    if (data.length) {
+      _$jscoverage['plastic.js'][347]++;
+      this.data(data);
+    }
+  }
+}), values: (function () {
+  _$jscoverage['plastic.js'][354]++;
+  return this.slice(0);
+}), take: (function (item) {
+  _$jscoverage['plastic.js'][361]++;
+  this.push(item);
+}), tap: (function (handler) {
+  _$jscoverage['plastic.js'][370]++;
   handler(this);
-  _$jscoverage['plastic.js'][284]++;
-  return this.chain;
-}), "log": (function (context, logItem) {
-  _$jscoverage['plastic.js'][293]++;
-  if (logItem) {
-    _$jscoverage['plastic.js'][294]++;
-    console.log(this[logItem]);
-  }
-  else {
-    _$jscoverage['plastic.js'][296]++;
-    console.log(this);
-  }
-  _$jscoverage['plastic.js'][298]++;
-  return this.chain;
+}), log: (function (logItem) {
+  _$jscoverage['plastic.js'][379]++;
+  console.log(logItem? this[logItem]: this);
+}), complete: (function (callback) {
+  _$jscoverage['plastic.js'][386]++;
+  this.asyncDone = callback;
 })});
 }
-  _$jscoverage['plastic.js'][304]++;
+  _$jscoverage['plastic.js'][392]++;
   if (module && module.exports) {
-    _$jscoverage['plastic.js'][304]++;
+    _$jscoverage['plastic.js'][392]++;
     module.exports = plastic;
   }
-  _$jscoverage['plastic.js'][305]++;
+  _$jscoverage['plastic.js'][393]++;
   this.plastic = plastic;
+  _$jscoverage['plastic.js'][396]++;
+  function extend(target, source) {
+    _$jscoverage['plastic.js'][397]++;
+    for (var attr in source) {
+      _$jscoverage['plastic.js'][398]++;
+      if (source.hasOwnProperty(attr)) {
+        _$jscoverage['plastic.js'][399]++;
+        target[attr] = source[attr];
+      }
+}
+}
 })();
-_$jscoverage['plastic.js'].source = ["/*","# plastic.js","","## Members of the plastic object:","- .fn : The object containing all the chainable functions","- .modules : The object containing all the available modules (including \"core\")","","## Members of the Chain object","- .context : The items to which the chainable function should apply (recursed by the loop handler)","- .rootContext : The root context. Usefull when keeping track of general model (all objects available, a dom, etc). This rootContext is available at every step of the chain.","- .next(context) : A function to create a new context to be returned by chainable function","","## Members of the execution scope within chainable functions (this) :","- .loop(handler) : A loop handler to assist in processing each items of the context","- .args: The arguments received when the chainable function was called","- .chain: The chain object which contains the context","- .next(contextItems) : A shortcut to the chains \".next\" function","- .context: A shortcut to the chains context","- .rootContext: A shortcut to the chains rootContext","","","## Chainable functions of the core module:","- .log(scopeItem) :","- .tap(handler) :","- .take(item) :","- .value() :","- .values() :","","","*/","","(function () {","\t// Add the current folder","","\tfunction plastic(functionsOrModule) {","","\t\t/**","\t\t * The core constructor for creating plastic objects.","\t\t * It is responsible for strating the function chaining","\t\t */","\t\t// todo: support adding functions with the factory here ?","\t\tfunction plasticFactory() {","","\t\t\t/**","\t\t\t * Create a new chain constructor for further prototyping","\t\t\t * This object will be user as the \"this\" scope in all function calls","\t\t\t * @param context","\t\t\t */","\t\t\t// Try to externalize it from the Plastic() object","\t\t\tfunction Chain (rootContext, contextInput) {","\t\t\t\tvar chain = this;","\t\t\t\t// Create a new context array;","\t\t\t\tthis.context = [];","\t\t\t\t// store the root context in the chain object","\t\t\t\tthis.rootContext = rootContext;","\t\t\t\tthis.next = function next(newContext) {","\t\t\t\t\treturn new Chain(chain.rootContext, newContext);","\t\t\t\t};","\t\t\t\tif (contextInput) {","\t\t\t\t\t// Transfer all the contextInput into the new context","\t\t\t\t\tfor (var i = 0; i &lt; contextInput.length; i = i + 1) {","\t\t\t\t\t\tthis.context.push(contextInput[i]);","\t\t\t\t\t}","\t\t\t\t}","\t\t\t}","","\t\t\tChain.prototype.emit = function(functionName, args, _prefix) {","\t\t\t\tvar","\t\t\t\t\t\tlistener,","\t\t\t\t\t\tchain = this,","\t\t\t\t\t\tprefix = (_prefix) ? _prefix + \":\" : \"\";","\t\t\t\tlistener = plasticFactory.listeners[(prefix || \"\") + functionName];","\t\t\t\tif (listener) {","\t\t\t\t\tlistener.apply(chain, args);","\t\t\t\t}","\t\t\t};","","","\t\t\t// add functions to the chain constructor","\t\t\tfor (var functionName in plasticFactory.fn) {","\t\t\t\tif (plasticFactory.fn.hasOwnProperty(functionName)) {","\t\t\t\t\tChain.prototype[functionName] = plasticFactory.fn[functionName];","\t\t\t\t}","\t\t\t}","","\t\t\t// Start a new chain with a fresh root context","\t\t\treturn new Chain([]);","\t\t}","","\t\t// The object that contains all the functions to be added to the main chain' prototype","\t\tplasticFactory.fn = {};","","\t\t/**","\t\t * A new functions to a Plastic object","\t\t * @param nameOrObj Function name or an object containing a literal object with multiple functions","\t\t * @param handler An optionnal handler (when the first argument is a function name)","\t\t */","\t\tplasticFactory.use = function (nameOrObj, handler) {","\t\t\tvar obj = {};","\t\t\tif (typeof(handler) === \"function\") {","\t\t\t\tobj = {};","\t\t\t\tobj[nameOrObj] = handler;","\t\t\t} else {","\t\t\t\tobj = nameOrObj;","\t\t\t}","\t\t\tfor (var functionName in obj) {","\t\t\t\tif (obj.hasOwnProperty(functionName)) {","\t\t\t\t\tthis.fn[functionName] = wrapper(functionName, obj[functionName]);","\t\t\t\t}","\t\t\t}","\t\t\treturn this;","\t\t};","","\t\tplasticFactory.listeners = {};","","\t\t/**","\t\t * Add an event listener on any function call.","\t\t * The listener will be triggered once with the whole context","\t\t * as an argument","\t\t * @param functionName","\t\t * @param handler","\t\t * @param _prefix","\t\t */","\t\tplasticFactory.on = function (functionName, handler, _prefix) {","\t\t\tvar prefix = (_prefix) ? _prefix + \":\" : \"\";","\t\t\tif (functionName &amp;&amp; handler) {","\t\t\t\tplasticFactory.listeners[prefix+functionName] = handler;","\t\t\t}","\t\t};","","\t\t/**","\t\t * Add an event listener on any function call.","\t\t * The listener will be triggered individually for each item","\t\t * of the context","\t\t * @param handlerName","\t\t * @param handler","\t\t */","\t\tplasticFactory.onEach = function (handlerName, handler) {","\t\t\tplasticFactory.on(handlerName, handler, \"each\");","\t\t};","","\t\t/**","\t\t * Internal function wrapper used for all functions added to a plastic object","\t\t * via the \"use\" function","\t\t * @param handler","\t\t */","\t\tfunction wrapper(handlerName, handler) {","\t\t\treturn function () {","\t\t\t\tvar chain = this;","\t\t\t\tvar args = Array.prototype.slice.call(arguments, 0);","\t\t\t\targs.unshift(chain.context);","\t\t\t\tvar _this = {","\t\t\t\t\tloop: loop,","\t\t\t\t\tnext: chain.next,","\t\t\t\t\tchain: chain,","\t\t\t\t\targs: args,","\t\t\t\t\tcontext: chain.context,","\t\t\t\t\trootContext: chain.rootContext","\t\t\t\t};","\t\t\t\t// Create a fresh loop handler","\t\t\t\tfunction loop(handler) {","\t\t\t\t\tvar newContext = [],","\t\t\t\t\t\treturnValue,","\t\t\t\t\t\tcontextItem,","\t\t\t\t\t\tloopArgs = args.slice(1);","\t\t\t\t\tfor (var i = 0; i &lt; chain.context.length; i = i + 1) {","\t\t\t\t\t\tcontextItem = chain.context[i];","\t\t\t\t\t\t// Put the contextItem as the first argument","\t\t\t\t\t\tloopArgs.unshift(contextItem);","\t\t\t\t\t\t// Emit an event before the handler is called","\t\t\t\t\t\tchain.emit.call(_this, handlerName, loopArgs, \"each\");","\t\t\t\t\t\t// Call the handler","\t\t\t\t\t\treturnValue = handler.apply(_this, loopArgs);","\t\t\t\t\t\t// If the loop handler return undefined or true, the item is","\t\t\t\t\t\t// added to the new context, otherwise it is not.","\t\t\t\t\t\tif (typeof returnValue === \"undefined\" || returnValue === true) {","\t\t\t\t\t\t\tnewContext.push(contextItem);","\t\t\t\t\t\t} else if (returnValue !== false) {","\t\t\t\t\t\t\tnewContext.push(returnValue);","\t\t\t\t\t\t}","\t\t\t\t\t\t// Otherwise, if false, dont add anything back in the context","\t\t\t\t\t\t// Remove the contextItem from the first argument","\t\t\t\t\t\tloopArgs.shift(contextItem);","\t\t\t\t\t}","\t\t\t\t\tvar newChain = new chain.constructor(chain.rootContext, newContext);","\t\t\t\t\treturn newChain;","\t\t\t\t}","\t\t\t\t// Emit an event before the handler is called","\t\t\t\tchain.emit.call(_this, handlerName, args);","\t\t\t\t// Call the handler","\t\t\t\tvar newChainOrReturnValue = handler.apply(_this, args);","\t\t\t\targs.pop();","\t\t\t\treturn newChainOrReturnValue;","\t\t\t};","\t\t}","","\t\t/**","\t\t * Load a plastic module from the standard modules or external modules","\t\t * @param moduleOrName","\t\t */","\t\tplasticFactory.load = function load(moduleOrName) {","\t\t\tvar module;","\t\t\tif (typeof moduleOrName === \"function\") {","\t\t\t\tmodule = moduleOrName;","\t\t\t} else {","\t\t\t\tmodule = plastic.modules[moduleOrName];","\t\t\t}","\t\t\tif (module) {","\t\t\t\t// call the module handler so it can configure this","\t\t\t\t// plastic instance","\t\t\t\tmodule.call(plasticFactory);","\t\t\t}","\t\t};","","\t\t// Load the plastic core","\t\tplasticFactory.load(\"core\");","","\t\t// Either load the specified additionnal module, or add specified","\t\t// functions to the new Plastic constructor","\t\tif (typeof functionsOrModule === \"string\") {","\t\t\tplasticFactory.load(functionsOrModule);","\t\t} else if (typeof functionsOrModule === \"function\") {","\t\t\t// todo: should it really go throug load","\t\t\tplasticFactory.load(functionsOrModule);","\t\t} else if (typeof functionsOrModule === \"object\") {","\t\t\t// If a collection of object is passed, its functions will be","\t\t\t// added to the plastic instance","\t\t\tplasticFactory.use(functionsOrModule);","\t\t}","","\t\t// Return the new Plastic constructor","\t\treturn plasticFactory();","\t}","","\t// todo: do a better detection of node (require could be also on the client side)","\t// Load modules with \"require\" if in node context","\tplastic.modules = {};","\tif (require) {","\t\t// todo: this should probably be an extend!","\t\tplastic.modules = require(\"./modules\");","\t}","","\t// Add the plastic core module to the list of modules","\tplastic.modules.core = core;","","\t/**","\t * The plastic.js core module, which is loaded with every instances","\t */","\tfunction core() {","\t\t// Add functions to the core module","\t\tthis.use({","\t\t\t/**","\t\t\t * Return the value of the first item in the context","\t\t\t * @param context","\t\t\t */","\t\t\t\"value\": function (context) {","\t\t\t\treturn this.context[0];","\t\t\t},","\t\t\t/**","\t\t\t * Return a array copy of the context","\t\t\t * @param context","\t\t\t */","\t\t\t\"values\": function (context) {","\t\t\t\treturn this.context.slice(0);","\t\t\t},","\t\t\t/**","\t\t\t * Create a next context with an additionnal item in it","\t\t\t * @param context","\t\t\t * @param item","\t\t\t */","\t\t\t\"take\": function (context, item) {","\t\t\t\tvar next = this.next(this.context);","\t\t\t\tnext.context.push(item);","\t\t\t\treturn next;","\t\t\t},","\t\t\t/**","\t\t\t * Core function for intercepting a chain and plating your the context","\t\t\t * Usefull for logging, debugging and ad-hoc operations.","\t\t\t * This function doest not create a new context","\t\t\t * @param handler","\t\t\t */","\t\t\t\"tap\": function (context, handler) {","\t\t\t\thandler(this);","\t\t\t\treturn this.chain;","\t\t\t},","\t\t\t/**","\t\t\t * Log the scope or member of the scope in which the function","\t\t\t * are executed. This lets you log things like .log(\"context\")","\t\t\t * This function doest not create a new context","\t\t\t * @param logItem","\t\t\t */","\t\t\t\"log\": function (context, logItem) {","\t\t\t\tif (logItem) {","\t\t\t\t\tconsole.log(this[logItem]);","\t\t\t\t} else {","\t\t\t\t\tconsole.log(this);","\t\t\t\t}","\t\t\t\treturn this.chain;","\t\t\t}","\t\t});","\t}","","\t// Export the plastic module","\tif (module &amp;&amp; module.exports) module.exports = plastic;","\tthis.plastic = plastic;","","})();",""];
+_$jscoverage['plastic.js'].source = ["/*","# plastic.js","","The plastic module is a factory that returns a new plastic instance","","## Members of the plastic class/function object:","","- .use : Add functionnalities to plastic (function or modules)","- .fn : The object containing all the chainable functions","- .modules : The object containing all the available modules (including \"core\")","- .listeners :","- .on :","- .onEach :","","## Members of the Chain object","","Note: The chain object is an array with additionnal attributes and methods","","- .emit() :","- .async :","- .asyncStarted : Boolean to know if an async chain is in progress","- .asyncDone() :","- .asyncStep() :","- .Chain","- .Plastic","","## Chainable functions of the core module:","","- .each(callback) :","- .log(scopeItem) :","- .tap(callback) :","- .take(item) :","- .value() :","- .values() :","- .complete(callback) : Set a single callback to be called when all async calls are complete","","*/","//X todo: chain function call returns Chain class ?","//X todo: augment chain with methods","//X todo: keep the same chain instance through each chained calls (getting rid of .next() )","//X todo: get rid of the (context, ...) as the first param on all plastic functions","//X todo: get rid of rootContext","//X todo: replace the .loop with a simple .each ? can it work ?","//X todo: function or attribute for acces to the main Class\t(.Plastic)","//X todo: a way to start a new chain within a callback or handler? (.Chain)","","(function () {","","\t//Todo: 3 wrappers is too much : plastic() -&gt; plasticFactory() -&gt; Chain() ???","\tfunction plastic(functionsOrModule) {","","\t\t/**","\t\t * The core constructor for creating plastic objects.","\t\t * It is responsible for strating the function chaining","\t\t */","\t\t// todo: the factory should take some query syntax as argument","\t\tfunction Plastic() {","\t\t\t/**","\t\t\t * Create a new chain","\t\t\t * This object will also be used as the \"this\" scope in all function calls","\t\t\t * @param [data]","\t\t\t */","\t\t\tfunction Chain(data) {","\t\t\t\tvar chain = [];","","\t\t\t\t// Expose the Chain factory","\t\t\t\tchain.Chain = Chain;","\t\t\t\t// Expose the Plastic factory","\t\t\t\tchain.Plastic = Plastic;","\t\t\t\t// Initialize async status","\t\t\t\tchain.async = [];","\t\t\t\tchain.asyncStarted = false;","\t\t\t\tchain.asyncDone = null; // default empty handler","","\t\t\t\t/**","\t\t\t\t * Process the next handler in the asyncStack","\t\t\t\t */","\t\t\t\tchain.asyncStep = function () {","\t\t\t\t\tif (chain.async.length &gt; 0) {","\t\t\t\t\t\tvar handler = chain.async.shift();","\t\t\t\t\t\thandler(function (err, newContext) {","\t\t\t\t\t\t\tif (err) {","\t\t\t\t\t\t\t\t// flush the async call stack","\t\t\t\t\t\t\t\tchain.async.length = 0;","\t\t\t\t\t\t\t\tchain.asyncStarted = false;","\t\t\t\t\t\t\t\tif (chain.asyncDone) chain.asyncDone(err);","\t\t\t\t\t\t\t} else {","\t\t\t\t\t\t\t\t// Empty the context","\t\t\t\t\t\t\t\tchain.length = 0;","\t\t\t\t\t\t\t\t// then transfer all new context item into the chains' context","\t\t\t\t\t\t\t\tfor (var i = 0; i &lt; newContext.length; i = i + 1) {","\t\t\t\t\t\t\t\t\tchain.push(newContext[i]);","\t\t\t\t\t\t\t\t}","\t\t\t\t\t\t\t\tprocess.nextTick(function () {","\t\t\t\t\t\t\t\t\tchain.asyncStep();","\t\t\t\t\t\t\t\t});","\t\t\t\t\t\t\t}","\t\t\t\t\t\t\tif (chain.async.length === 0) {","\t\t\t\t\t\t\t\tchain.asyncStarted = false;","\t\t\t\t\t\t\t\tif (chain.asyncDone) chain.asyncDone(null, chain);","\t\t\t\t\t\t\t} else {","\t\t\t\t\t\t\t\tprocess.nextTick(function() {","\t\t\t\t\t\t\t\t\tchain.asyncStep();","\t\t\t\t\t\t\t\t});","\t\t\t\t\t\t\t}","\t\t\t\t\t\t});","\t\t\t\t\t}","\t\t\t\t\treturn chain;","\t\t\t\t};","","\t\t\t\tchain.data = function data(data) {","\t\t\t\t\tchain.length = 0;","\t\t\t\t\tif (typeof data === \"object\") {","\t\t\t\t\t\tif (data.constructor.name === \"Array\") {","\t\t\t\t\t\t\t// Transfer all the data into the chain","\t\t\t\t\t\t\tfor (var i = 0; i &lt; data.length; i = i + 1) {","\t\t\t\t\t\t\t\tchain.push(data[i]);","\t\t\t\t\t\t\t}","\t\t\t\t\t\t}","\t\t\t\t\t}","\t\t\t\t\treturn chain;","\t\t\t\t};","","\t\t\t\tchain.emit = function(functionName, args, _prefix) {","\t\t\t\t\tvar","\t\t\t\t\t\t\tlistener,","\t\t\t\t\t\t\tprefix = (_prefix) ? _prefix + \":\" : \"\";","\t\t\t\t\tlistener = Plastic.listeners[(prefix || \"\") + functionName];","\t\t\t\t\tif (listener) {","\t\t\t\t\t\tlistener.apply(chain, args);","\t\t\t\t\t}","\t\t\t\t\treturn chain;","\t\t\t\t};","","\t\t\t\t// Extend the chain will all the plastic functions","\t\t\t\textend(chain, Plastic.fn);","\t\t\t\t// Set the current data set","\t\t\t\tchain.data(data);","","\t\t\t\treturn chain;","\t\t\t}","","","\t\t\t// Start a new chain with a fresh root context","\t\t\treturn Chain();","\t\t}","","\t\t// The object that contains all the functions to be added to the main chain' prototype","\t\tPlastic.fn = {};","\t\t","\t\t/**","\t\t * A new functions to a Plastic object","\t\t *","\t\t * Method Overloads:","\t\t * String : Load a module by name","\t\t * Array: Load a series of modules by name","\t\t * Function: Load a module (modules are function handlers)","\t\t * Object : Add multiple handlers. Each object member is a single handler.","\t\t * String, Function: Add a single handler","\t\t */","\t\tPlastic.use = function () {","\t\t\tvar","\t\t\t\t\targs = arguments,","\t\t\t\t\tasync = args[1] || false,","\t\t\t\t\tconstructor, // name of the constructor of the the first argument","\t\t\t\t\tobj,","\t\t\t\t\tmodules; // A module (as a function or a string)","","\t\t\tconstructor = args[0].constructor.name;","\t\t\tif (constructor === \"Array\") {","\t\t\t\tmodules = args[0];","\t\t\t} else if (constructor === \"String\") {","\t\t\t\tif (args.length === 2) {","\t\t\t\t\tconstructor = args[1].constructor.name;","\t\t\t\t\tif (constructor === \"Function\") {","\t\t\t\t\t\t// Create an object with a single method","\t\t\t\t\t\tobj = {};","\t\t\t\t\t\tobj[args[0]] = args[1];","\t\t\t\t\t\tasync = args[2] || false;","\t\t\t\t\t}","\t\t\t\t} else {","\t\t\t\t\tmodules = [args[0]];","\t\t\t\t}","\t\t\t} else if (constructor === \"Function\") {","\t\t\t\tmodules = [args[0]];","\t\t\t} else if (constructor === \"Object\") {","\t\t\t\tobj = args[0]","\t\t\t}","","\t\t\t// todo: separate each cases in separate functions and then use these functions in previous if/else","\t\t\tvar i;","\t\t\tif (obj) {","\t\t\t\tfor (i in obj) {","\t\t\t\t\tif (obj.hasOwnProperty(i)) {","\t\t\t\t\t\tthis.fn[i] = wrapper(i, obj[i], async);","\t\t\t\t\t}","\t\t\t\t}","\t\t\t} else if (modules) {","\t\t\t\t// Load a series of modules","\t\t\t\tfor (i = 0; i &lt; modules.length; i = i + 1) {","\t\t\t\t\tloadModule(modules[i]);","\t\t\t\t}","\t\t\t}","\t\t\treturn this;","\t\t};","","","\t\t// todo: do a better detection of node (require could be also on the client side)","\t\t// Load modules with \"require\" if in node context","\t\tPlastic.modules = {};","\t\tif (require) {","\t\t\tPlastic.modules = require(\"./modules\");","\t\t}","\t\t// Add the plastic core module to the list of modules","\t\tPlastic.modules.core = core;","","\t\tPlastic.listeners = {};","","\t\t/**","\t\t * Add an event listener on any function call.","\t\t * The listener will be triggered once with the whole context","\t\t * as an argument","\t\t * @param functionName","\t\t * @param handler","\t\t * @param _prefix","\t\t */","\t\tPlastic.on = function (functionName, handler, _prefix) {","\t\t\tvar prefix = (_prefix) ? _prefix + \":\" : \"\";","\t\t\tif (functionName &amp;&amp; handler) {","\t\t\t\tPlastic.listeners[prefix+functionName] = handler;","\t\t\t}","\t\t};","","\t\t/**","\t\t * Add an event listener on any function call.","\t\t * The listener will be triggered individually for each item","\t\t * of the context","\t\t * @param handlerName","\t\t * @param handler","\t\t */","\t\tPlastic.onEach = function (handlerName, handler) {","\t\t\tPlastic.on(handlerName, handler, \"each\");","\t\t};","","\t\t/**","\t\t * Internal function wrapper used for all functions added to a plastic object","\t\t * via the \"use\" function","\t\t * @param handler","\t\t */","\t\tfunction wrapper(handlerName, handler, isAsync) {","\t\t\treturn function () {","\t\t\t\tvar","\t\t\t\t\t\tchain = this,","\t\t\t\t\t\tnewChainOrReturnValue,","\t\t\t\t\t\targs = Array.prototype.slice.call(arguments, 0); // Get a real array from arguments","","\t\t\t\t// Emit an event before the handler is called","\t\t\t\tchain.emit(handlerName, args);","","\t\t\t\t// Call the handler","\t\t\t\tif (isAsync) {","\t\t\t\t\t// Add a new handler onto the asyncStack","\t\t\t\t\tchain.async.push(function(callback) {","\t\t\t\t\t\targs.push(callback); // Add the callback to the list of arguments","\t\t\t\t\t\tnewChainOrReturnValue = handler.apply(chain, args);","\t\t\t\t\t\tif (newChainOrReturnValue === void 0) newChainOrReturnValue = chain;","\t\t\t\t\t\treturn newChainOrReturnValue;","\t\t\t\t\t});","\t\t\t\t\t// Start the async chain on the next tick if its not already started","\t\t\t\t\tif (!chain.asyncStarted) {","\t\t\t\t\t\tchain.asyncStarted = true;","\t\t\t\t\t\tprocess.nextTick(function() {","\t\t\t\t\t\t\tchain.asyncStep()","\t\t\t\t\t\t});","\t\t\t\t\t}","\t\t\t\t\tnewChainOrReturnValue = chain; // Return the same unchanged chain","\t\t\t\t} else {","\t\t\t\t\tnewChainOrReturnValue = handler.apply(chain, args);","\t\t\t\t\tif (newChainOrReturnValue === void 0) newChainOrReturnValue = chain;","\t\t\t\t}","\t\t\t\treturn newChainOrReturnValue;","\t\t\t};","\t\t}","","\t\t/**","\t\t * Load a plastic module from the standard modules or external modules","\t\t * @param moduleOrName","\t\t */","\t\tfunction loadModule(moduleOrName) {","\t\t\tvar module;","\t\t\tif (typeof moduleOrName === \"function\") {","\t\t\t\tmodule = moduleOrName;","\t\t\t} else {","\t\t\t\tmodule = Plastic.modules[moduleOrName];","\t\t\t}","\t\t\tif (module) {","\t\t\t\t// call the module handler with the factory as its context","\t\t\t\tmodule.call(Plastic);","\t\t\t}","\t\t}","","\t\t// Load the plastic core","\t\tPlastic.use(\"core\");","","\t\tif (functionsOrModule) Plastic.use(functionsOrModule);","","\t\t// Return the new Plastic constructor","\t\treturn Plastic;","\t}","","","\t/**","\t * The plastic.js core module, which is loaded with every instances","\t */","\tfunction core() {","\t\t// Add functions to the core module","\t\tthis.use({","\t\t\t/**","\t\t\t * Return the value of the first item in the context","\t\t\t */","\t\t\tvalue: function (newValue) {","\t\t\t\tvar","\t\t\t\t\t\tattr,","\t\t\t\t\t\titem = this[0];","\t\t\t\tif (item !== void 0) {","\t\t\t\t\tif (typeof newValue === \"object\") {","\t\t\t\t\t\tfor (attr in newValue) {","\t\t\t\t\t\t\tif (newValue.hasOwnProperty(attr)) {","\t\t\t\t\t\t\t\titem[attr] = newValue[attr];","\t\t\t\t\t\t\t}","\t\t\t\t\t\t}","\t\t\t\t\t}","\t\t\t\t}","\t\t\t\treturn item;","\t\t\t},","\t\t\teach: function (callback) {","\t\t\t\tvar value,","\t\t\t\t\tdata = [];","\t\t\t\tif (typeof callback === \"function\") {","\t\t\t\t\tfor (var i = 0; i &lt; this.length; i = i + 1) {","\t\t\t\t\t\tvalue = callback.call(this, this[i]);","\t\t\t\t\t\tif (value !== void 0) {","\t\t\t\t\t\t\tdata.push(value);","\t\t\t\t\t\t}","\t\t\t\t\t}","\t\t\t\t\t// If the iterator returned values, use them as the new dataset","\t\t\t\t\tif (data.length) this.data(data);","\t\t\t\t}","\t\t\t},","\t\t\t/**","\t\t\t * Return a array copy of the context","\t\t\t */","\t\t\tvalues: function () {","\t\t\t\treturn this.slice(0);","\t\t\t},","\t\t\t/**","\t\t\t * Create a next context with an additionnal item in it","\t\t\t * @param item","\t\t\t */","\t\t\ttake: function (item) {","\t\t\t\tthis.push(item);","\t\t\t},","\t\t\t/**","\t\t\t * Core function for intercepting a chain and plating your the context","\t\t\t * Usefull for logging, debugging and ad-hoc operations.","\t\t\t * This function doest not create a new context","\t\t\t * @param handler","\t\t\t */","\t\t\ttap: function (handler) {","\t\t\t\thandler(this);","\t\t\t},","\t\t\t/**","\t\t\t * Log the scope or member of the scope in which the function","\t\t\t * are executed. This lets you log things like .log(\"context\")","\t\t\t * This function doest not create a new context","\t\t\t * @param logItem","\t\t\t */","\t\t\tlog: function (logItem) {","\t\t\t\t\tconsole.log(logItem ? this[logItem] : this);","\t\t\t},","\t\t\t/**","\t\t\t * Called when all asynch chain calls are completed!","\t\t\t * @param callback","\t\t\t */","\t\t\tcomplete: function (callback) {","\t\t\t\tthis.asyncDone = callback;","\t\t\t}","\t\t});","\t}","","\t// Export the plastic module","\tif (module &amp;&amp; module.exports) module.exports = plastic;","\tthis.plastic = plastic;","","\t// Small utility to extend an object","\tfunction extend(target, source) {","\t\tfor (var attr in source) {","\t\t\tif (source.hasOwnProperty(attr)) {","\t\t\t\ttarget[attr] = source[attr];","\t\t\t}","\t\t}","\t}","","","})();",""];
