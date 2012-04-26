@@ -24,6 +24,7 @@
 	},
 	"main" : "lib/plastic.js",
 	"scripts": {
-		"test": "node server.js"
+		"coverage": "rm -rf lib-cov;node-jscoverage lib lib-cov;mocha --reporter html-cov > coverage.html",
+		"test": "mocha"
 	}
 }
