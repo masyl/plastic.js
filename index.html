@@ -7,6 +7,7 @@
 
 	<link rel="stylesheet" href="stylesheets/styles.css">
 	<link rel="stylesheet" href="stylesheets/pygment_trac.css">
+	<link rel="stylesheet" href="fonts/permanent-marker/stylesheet.css" type="text/css" charset="utf-8">
 	<meta name="viewport"
 		  content="width=device-width, initial-scale=1, user-scalable=no">
 	<!--[if lt IE 9]>
@@ -16,17 +17,9 @@
 <body>
 <div class="wrapper">
 	<header>
-		<img src="./images/plasticjs-logo-big.png" alt="Logo"/>
+		<img class="logo" src="./images/logo-big-plastic.png" alt="Logo"/>
 
-		<h1>Plastic.js</h1>
-
-		<p>Create fluent chainable APIs with ease</p>
-
-		<p class="view"><a href="https://github.com/masyl/plastic.js">View the
-			Project on GitHub
-			<small>masyl/plastic.js</small>
-		</a></p>
-		<ul>
+		<ul class="buttons">
 			<li><a href="https://github.com/masyl/plastic.js/zipball/master">Download
 				<strong>ZIP File</strong></a></li>
 			<li><a href="https://github.com/masyl/plastic.js/tarball/master">Download
@@ -34,111 +27,107 @@
 			<li><a href="https://github.com/masyl/plastic.js">Fork On <strong>GitHub</strong></a>
 			</li>
 		</ul>
-	</header>
-	<section>
-		<h1>What is plastic.js</h1>
-
-		<p>
-			Plastic.js allow you to created chainable API with a syntax and usage similar to popular
-		api' like jQuery and underscore.
-		</p>
-		<p>
-			By itself plastic.js doesnt do much, but it comes with extension modules that provide that actual features.
-		</p>
-
-		<h2>Project status</h2>
-
-		<p>This project is still under development. You should not use it for production purposes yet.</p>
-
-		<h2>Modules</h2>
-
-		<p>Here are the current modules:</p>
-
-		<ul>
-		<li>core : the core module that comes with any instance</li>
-		<li>model : Create and manipulate an model objects without the need for "object oriented" classes.</li>
-		<li>math : Provide mathematical operators</li>
-		</ul><h2>plastic.js core api</h2>
-
-		<p>Let's say you wish to chain operations on colors, the most direct way would be
-		to create a new plastic object and ".use" a few methods like so:</p>
-
-		<pre><code>var colorizer = plastic({
-		    darker: function(colors) { ...some code here... },
-		    lighter: function(colors) { ...some code here... }
-		    red: function(colors) { ...some code here... }
-		});
-		</code></pre>
-
-		<p>Once this is done, you can use the colorizer object and start chaining function
-		calls:</p>
-
-		<pre><code>var mainColor = "#6666FF"; // Light blue
-		var shadow = colorizer().take(mainColor).darker(0.5).value(); // darker blue
-		var lightGreen = colorizer()
-		    .take(mainColor)
-		    .lighter(0.5)
-		    .red(0.5)
-		    .value(); // light green
-		</code></pre>
-
-		<p>And you can also parse multiple colors at the same time:</p>
-
-		<pre><code>var redGradient = colorizer()
-		    .take("#333")
-		    .take("#666")
-		    .take("#999")
-		    .take("#CCC")
-		    .red(0.5)
-		    .values(); // Return an array of 4 red-ish colors
-		</code></pre>
-
-		<p>Those are only the most basic examples and only illustrate the basic Idea.</p>
-
-		<p>You can dig into the "model" and "math" module to see what else can be done.</p>
-
-		<p>Soon, I hope to have a more complete documentation.</p>
-
-		<h2>Features</h2>
-
-		<ul>
-		<li>Creates chainable (fluent) api with very little boilerplate code</li>
-		<li>Custom chainable function can handle single items or collections</li>
-		<li>Very slim core module less than 2k compressed.</li>
-		<li>You can create plastic object on the fly or package them as modules</li>
-		<li>You can add functions to a "plastic object" using:
-
-		<ul>
-		<li>a name and a function</li>
-		<li>an object containing multiple function</li>
-		<li>a ad-hoc module in the form of a single function</li>
-		<li>a module name to by loaded dynamically</li>
+		<h1>More modules</h1>
+		<ul class="otherModules">
+			<li><a href="http://masyl.github.com/plastic.js/"><img src="./images/logo-small-cook.png"/> Cook.js</a></li>
+			<!--
+			<li><a href="#"><img src="./images/logo-small-funex.png"/> Funex.js</a></li>
+			<li><a href="#"><img src="./images/logo-small-enhance.png"/> Enhance.js</a></li>
+			-->
 		</ul>
-		</li>
-		<li>Support for ".on()" event listeners on all chainable functions</li>
-		<li>Handling of both a local context and a root context from more complex operations</li>
-		</ul><h2>Tests</h2>
+	</header>
 
-		<p>Even if the tests are not extensive yet, I try to keep the test coverage at 100%.
-		You can use "mocha" to run the tests. The "lib-cov" folder contains the instrumented
-		version of the code in order to obtain the html code-coverage report during tests.</p>
-
-		<h3>Commands to start unit tests</h3>
-
-		<pre><code>rm -rf lib-cov
-		node-jscoverage lib lib-cov
-		mocha --reporter spec
-		mocha --reporter html-cov test/math.js &gt; coverage.html
-		</code></pre>
-
-		<h4>One-liner</h4>
-
-		<pre><code>rm -rf lib-cov;node-jscoverage lib lib-cov;mocha --reporter spec;mocha --reporter html-cov &gt; coverage.html
-		</code></pre>
-
-		<p>With these commands, you will obtain a detailed test result and it will have create a "coverage.html" in the same folder.</p>
+	<section>
+		<div id="markdownContent">
 
 
+# Plastic.js
+
+Plastic.js allow you to created chainable API with a syntax and usage similar to popular
+api' like jQuery and underscore.
+
+## Project status
+
+This project is still under development. You should not use it for production purposes yet.
+
+## Modules
+
+Here are the current modules:
+
+- core : the core module that comes with any instance
+- model : Create and manipulate an model objects without the need for "object oriented" classes.
+- math : Provide mathematical operators
+
+## plastic.js core api
+
+Let's say you wish to chain operations on colors, the most direct way would be
+to create a new plastic object and ".use" a few methods like so:
+
+	var colorizer = plastic({
+		darker: function(colors) { ...some code here... },
+		lighter: function(colors) { ...some code here... }
+		red: function(colors) { ...some code here... }
+	});
+
+Once this is done, you can use the colorizer object and start chaining function
+calls:
+
+	var mainColor = "#6666FF"; // Light blue
+	var shadow = colorizer().take(mainColor).darker(0.5).value(); // darker blue
+	var lightGreen = colorizer()
+		.take(mainColor)
+		.lighter(0.5)
+		.red(0.5)
+		.value(); // light green
+
+And you can also parse multiple colors at the same time:
+
+	var redGradient = colorizer()
+		.take("#333")
+		.take("#666")
+		.take("#999")
+		.take("#CCC")
+		.red(0.5)
+		.values(); // Return an array of 4 red-ish colors
+
+Those are only the most basic examples and only illustrate the basic Idea.
+
+You can dig into the "model" and "math" module to see what else can be done.
+
+Soon, I hope to have a more complete documentation.
+
+## Features
+- Creates chainable (fluent) api with very little boilerplate code
+- Custom chainable function can handle single items or collections
+- Very slim core module less than 2k compressed.
+- You can create plastic object on the fly or package them as modules
+- You can add functions to a "plastic object" using:
+	- a name and a function
+	- an object containing multiple function
+	- a ad-hoc module in the form of a single function
+	- a module name to by loaded dynamically
+- Support for ".on()" event listeners on all chainable functions
+- Handling of both a local context and a root context from more complex operations
+
+## Tests
+
+Even if the tests are not extensive yet, I try to keep the test coverage at 100%.
+You can use "mocha" to run the tests. The "lib-cov" folder contains the instrumented
+version of the code in order to obtain the html code-coverage report during tests.
+
+### Commands to start unit tests
+	rm -rf lib-cov
+	node-jscoverage lib lib-cov
+	mocha --reporter spec
+	mocha --reporter html-cov test/math.js > coverage.html
+
+#### One-liner
+	rm -rf lib-cov;node-jscoverage lib lib-cov;mocha --reporter spec;mocha --reporter html-cov > coverage.html
+
+With these commands, you will obtain a detailed test result and it will have create a "coverage.html" in the same folder.
+
+
+		</div>
 		<hr />
 		<footer>
 			<p>This project is maintained by <a href="https://github.com/masyl">masyl</a>
@@ -152,6 +141,12 @@
 		</footer>
 	</section>
 </div>
+<script src="javascripts/showdown.js"></script>
+<script>
+	var showdown = new Showdown.converter();
+	var markdownContent = document.getElementById("markdownContent");
+	markdownContent.innerHTML = showdown.makeHtml(markdownContent.innerHTML);
+</script>
 <script src="javascripts/scale.fix.js"></script>
 
 </body>
